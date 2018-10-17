@@ -1,0 +1,138 @@
+##### Nozzle : a group of components
+s:Ge/Nozzle/Message 		= "Constructing IBA Nozzle"
+s:Ge/Nozzle/Parent  		= "SuperGroup"
+s:Ge/Nozzle/Type    		= "Group"
+d:Ge/Nozzle/TransX  		= 0 m
+d:Ge/Nozzle/TransY  		= 0 m
+d:Ge/Nozzle/TransZ  		= 0 m
+d:Ge/Nozzle/RotX    		= 0 deg
+d:Ge/Nozzle/RotY    		= 0 deg
+d:Ge/Nozzle/RotZ    		= 0 deg
+
+##### Vacuum Window (VW) 
+s:Ge/VW/Parent	 		= "Nozzle"
+s:Ge/VW/Type	 		= "TsBox"
+s:Ge/VW/Material 		= "Mylar"
+d:Ge/VW/HLX			= 3 cm
+d:Ge/VW/HLY			= Ge/VW/HLX cm
+d:Ge/VW/HLZ			= .003125 cm
+d:Ge/VW/TransZ	 		= -290 cm
+d:Ge/VW/RotX 			= 0 deg
+d:Ge/VW/RotY 			= 0 deg
+
+##### Vacuum Tank (VT) 
+s:Ge/VT/Parent	 		= "Nozzle"
+s:Ge/VT/Type	 		= "TsBox"
+s:Ge/VT/Material 		= "Vacuum"
+d:Ge/VT/HLX			= 50 cm
+d:Ge/VT/HLY			= Ge/VT/HLX cm
+d:Ge/VT/HLZ			= 53.85 cm
+d:Ge/VT/TransZ	 		= -229.45 cm
+
+##### Including Scanning Magnets 
+includeFile 			= Geometry/Nozzle_ScanningMagnets.txt
+s:Ge/SM1/Parent 		= "VT"
+d:Ge/SM1/TransZ 		= -4.95 cm
+s:Ge/SM2/Parent 		= "VT"
+d:Ge/SM2/TransZ 		= 34.35 cm
+
+##### Including Ion Chambers 
+includeFile 			= Geometry/Nozzle_IonChambers_CPO.txt
+s:Ge/IC1/Parent 		= "Nozzle"
+d:Ge/IC1/TransZ 		= -286.3 cm
+s:Ge/IC2/Parent 		= "Nozzle"
+d:Ge/IC2/TransZ 		= -118.75 cm
+
+##### Group to represent Snoutgroup retraction (total retraction = 51.8 cm and total exit = 6.8 cm)
+s:Ge/SnoutGroup/Type		= "Group"
+s:Ge/SnoutGroup/Parent		= "Nozzle"
+d:Ge/SnoutGroup/TransX		= 0 m
+d:Ge/SnoutGroup/TransY		= 0 m
+d:Ge/SnoutGroup/RotX		= 0 deg
+d:Ge/SnoutGroup/RotY		= 0 deg
+d:Ge/SnoutGroup/RotZ		= 0 deg
+
+##### Field Mirror (FM) 
+s:Ge/FM/Parent	 		= "SuperGroup"
+s:Ge/FM/Type	 		= "TsBox"
+s:Ge/FM/Material 		= "World"
+d:Ge/FM/HLX			= 18.1 cm
+d:Ge/FM/HLY	  		= 21.8 cm
+
+##### Snout Holder (SH) 
+s:Ge/SH/Message   		= "Constructing IBA TsSnoutHolder"
+s:Ge/SH/Parent 	  		= "SnoutGroup"
+s:Ge/SH/Type   	  		= "TsBox"
+s:Ge/SH/Material  		= "World"
+d:Ge/SH/HLX 	  		= 47.5 cm 
+d:Ge/SH/HLY 	  		= 37.5 cm
+d:Ge/SH/HLZ 	  		= 6.3 cm
+d:Ge/SH/TransZ	  		= -54.5 cm 
+b:Ge/SH/Invisible 		= "1"
+
+##### SH : Brass Tube 1 
+s:Ge/SH/BrassTube1/Parent 	= "SH"
+s:Ge/SH/BrassTube1/Type     	= "TsCylinder"
+s:Ge/SH/BrassTube1/Material 	= "Brass"
+d:Ge/SH/BrassTube1/RMin 	= 18.4 cm
+d:Ge/SH/BrassTube1/RMax 	= 23 cm
+d:Ge/SH/BrassTube1/HL   	= 1 cm
+d:Ge/SH/BrassTube1/SPhi 	= 0 deg
+d:Ge/SH/BrassTube1/DPhi 	= 360 deg
+d:Ge/SH/BrassTube1/TransZ   	= -5.3 cm
+
+##### SH : Aluminum Box 1 
+s:Ge/SH/AluBox1/Parent 	 	= "SH"
+s:Ge/SH/AluBox1/Type   	 	= "TsBox"
+s:Ge/SH/AluBox1/Material 	= "Aluminum"
+d:Ge/SH/AluBox1/HLX 	 	= 35.15 cm 
+d:Ge/SH/AluBox1/HLY 	 	= 27.5 cm
+d:Ge/SH/AluBox1/HLZ 	 	= 3.4 cm
+d:Ge/SH/AluBox1/TransX	 	= 7.65 cm
+d:Ge/SH/AluBox1/TransZ	 	= -.9 cm
+
+##### SH : Brass Tube 2
+s:Ge/SH/BrassTube2/Parent   	= "SH/AluBox1"
+s:Ge/SH/BrassTube2/Type     	= "TsCylinder"
+s:Ge/SH/BrassTube2/Material 	= "Brass"
+d:Ge/SH/BrassTube2/RMin 	= 0 cm
+d:Ge/SH/BrassTube2/RMax 	= 23 cm
+d:Ge/SH/BrassTube2/HL   	= 3.4 cm
+d:Ge/SH/BrassTube2/SPhi 	= 0 deg
+d:Ge/SH/BrassTube2/DPhi 	= 360 deg
+d:Ge/SH/BrassTube2/TransX   	= -7.65 cm
+
+##### SH : Air Cone 1 
+s:Ge/SH/AirCone1/Parent   	= "SH/BrassTube2"
+s:Ge/SH/AirCone1/Type     	= "G4Cons"
+s:Ge/SH/AirCone1/Material 	= "World"
+d:Ge/SH/AirCone1/RMin1 	  	= 0 cm
+d:Ge/SH/AirCone1/RMax1    	= 18.4 cm
+d:Ge/SH/AirCone1/RMin2 	  	= 0 cm
+d:Ge/SH/AirCone1/RMax2 	  	= 19.191037735849057 cm
+d:Ge/SH/AirCone1/HL    	  	= 3.4 cm
+d:Ge/SH/AirCone1/SPhi 	  	= 0 deg
+d:Ge/SH/AirCone1/DPhi 	  	= 360 deg
+
+##### SH : Brass Tube 3
+s:Ge/SH/BrassTube3/Parent   	= "SH"
+s:Ge/SH/BrassTube3/Type     	= "TsCylinder"
+s:Ge/SH/BrassTube3/Material 	= "Brass"
+d:Ge/SH/BrassTube3/RMin 	= 0 cm
+d:Ge/SH/BrassTube3/RMax 	= 23 cm
+d:Ge/SH/BrassTube3/HL   	= 1.9 cm
+d:Ge/SH/BrassTube3/SPhi 	= 0 deg
+d:Ge/SH/BrassTube3/DPhi 	= 360 deg
+d:Ge/SH/BrassTube3/TransZ 	= 4.4 cm
+
+##### SH : Air Cone 2
+s:Ge/SH/AirCone2/Parent   	= "SH/BrassTube3"
+s:Ge/SH/AirCone2/Type     	= "G4Cons"
+s:Ge/SH/AirCone2/Material 	= "World"
+d:Ge/SH/AirCone2/RMin1 	  	= 0 cm
+d:Ge/SH/AirCone2/RMax1 	  	= 19.191037735849057 cm
+d:Ge/SH/AirCone2/RMin2 	  	= 0 cm
+d:Ge/SH/AirCone2/RMax2 	  	= 19.575 cm
+d:Ge/SH/AirCone2/HL    	  	= 1.9 cm
+d:Ge/SH/AirCone2/SPhi 	  	= 0 deg
+d:Ge/SH/AirCone2/DPhi 	  	= 360 deg

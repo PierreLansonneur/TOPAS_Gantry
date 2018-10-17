@@ -1,0 +1,40 @@
+# WaterTank Group:
+s:Ge/WaterTank/Message 			= "Constructing WaterTank"
+s:Ge/WaterTank/Type    			= "Group"
+s:Ge/WaterTank/Parent  			= "World"
+d:Ge/WaterTank/TransX  			= 0 m
+d:Ge/WaterTank/TransY  			= 0 m
+d:Ge/WaterTank/TransZ  			= 0 m
+d:Ge/WaterTank/RotX    			= 0 deg
+d:Ge/WaterTank/RotY    			= 0 deg
+d:Ge/WaterTank/RotZ    			= 0 deg
+
+# Score Dose In Water
+s:Ge/WaterTank/Water/Parent   		= "WaterTank"
+s:Ge/WaterTank/Water/Type     		= "TsBox"
+s:Ge/WaterTank/Water/Material 		= "G4_WATER"
+d:Ge/WaterTank/Water/HLX 		= 10 cm # Half Length
+d:Ge/WaterTank/Water/HLY 		= 10 cm # Half Length
+d:Ge/WaterTank/Water/HLZ 		= 10 cm # Half Length, beam axis
+#d:Ge/WaterTank/Water/TransX   		= Ge/WaterTank/Water/HLX cm
+#d:Ge/WaterTank/Water/TransY   		= Ge/WaterTank/Water/HLY cm
+d:Ge/WaterTank/Water/TransZ   		= Ge/WaterTank/Water/HLZ cm
+i:Ge/WaterTank/Water/XBins 		= 200
+i:Ge/WaterTank/Water/YBins 		= 200
+i:Ge/WaterTank/Water/ZBins		= 200
+
+d:Ge/WaterTank/Water/MaxStepSize 	= 0.5 mm
+
+s:Sc/DoseScorer/Quantity		= "DoseToWater"
+s:Sc/DoseScorer/Component		= "WaterTank/Water"
+s:Sc/DoseScorer/OutputFile		= "./output/cuve_Dose"
+s:Sc/DoseScorer/OutputType		= "DICOM"
+b:Sc/DoseScorer/OutputToConsole		= "0"
+s:Sc/DoseScorer/IfOutputFileAlreadyExists = "Increment"
+
+#s:Sc/LETScorer/Quantity		= "ProtonLET"
+#s:Sc/LETScorer/Component		= "WaterTank/Water"
+#s:Sc/LETScorer/OutputFile		= "cuve_LET"
+#s:Sc/LETScorer/OutputType		= "DICOM"
+#b:Sc/LETScorer/OutputToConsole		= "0"
+#s:Sc/LETScorer/IfOutputFileAlreadyExists = "Increment"

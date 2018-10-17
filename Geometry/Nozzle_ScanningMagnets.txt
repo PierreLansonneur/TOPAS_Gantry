@@ -1,0 +1,558 @@
+
+### Scanning Magnet 1 (SM1) ############################
+
+s:Ge/SM1/Message   = "Constructing IBA TsScanningMagnet1"
+#s:Ge/SM1/Parent    = "World"
+s:Ge/SM1/Type	   = "TsBox"
+s:Ge/SM1/Material  = "Vacuum"	# air (World)
+d:Ge/SM1/HLX 	   = 37.5 cm 
+d:Ge/SM1/HLY 	   = Ge/SM1/HLX cm
+d:Ge/SM1/HLZ 	   = 18.2 cm
+d:Ge/SM1/TransZ    = -20.15 cm
+b:Ge/SM1/Invisible = "1"
+
+# Copper Box 1
+s:Ge/SM1/CuBox1/Parent   = "SM1"
+s:Ge/SM1/CuBox1/Type 	 = "TsBox"
+s:Ge/SM1/CuBox1/Material = "Copper"
+d:Ge/SM1/CuBox1/HLX 	 = 3 cm
+d:Ge/SM1/CuBox1/HLY 	 = 15 cm
+d:Ge/SM1/CuBox1/HLZ 	 = 3.1 cm
+d:Ge/SM1/CuBox1/TransX   = 6.5 cm
+d:Ge/SM1/CuBox1/TransZ   = -15.1 cm
+
+# Copper Box 2
+s:Ge/SM1/CuBox2/Parent   = "SM1"
+s:Ge/SM1/CuBox2/Type 	 = "TsBox"
+s:Ge/SM1/CuBox2/Material = "Copper"
+d:Ge/SM1/CuBox2/HLX 	 = 3 cm
+d:Ge/SM1/CuBox2/HLY 	 = 15 cm
+d:Ge/SM1/CuBox2/HLZ 	 = 3.1 cm
+d:Ge/SM1/CuBox2/TransX   = -6.5 cm
+d:Ge/SM1/CuBox2/TransZ   = -15.1 cm
+
+# Copper Box 3
+s:Ge/SM1/CuBox3/Parent   = "SM1"
+s:Ge/SM1/CuBox3/Type 	 = "TsBox"
+s:Ge/SM1/CuBox3/Material = "Copper"
+d:Ge/SM1/CuBox3/HLX 	 = 3 cm
+d:Ge/SM1/CuBox3/HLY 	 = 15 cm
+d:Ge/SM1/CuBox3/HLZ 	 = 3.1 cm
+d:Ge/SM1/CuBox3/TransX   = 6.5 cm
+d:Ge/SM1/CuBox3/TransZ   = 15.1 cm
+
+# Copper Box 4
+s:Ge/SM1/CuBox4/Parent   = "SM1"
+s:Ge/SM1/CuBox4/Type 	 = "TsBox"
+s:Ge/SM1/CuBox4/Material = "Copper"
+d:Ge/SM1/CuBox4/HLX 	 = 3 cm
+d:Ge/SM1/CuBox4/HLY 	 = 15 cm
+d:Ge/SM1/CuBox4/HLZ 	 = 3.1 cm
+d:Ge/SM1/CuBox4/TransX   = -6.5 cm
+d:Ge/SM1/CuBox4/TransZ   = 15.1 cm
+
+# Steel Box 1
+s:Ge/SM1/SteelBox1/Parent   = "SM1"
+s:Ge/SM1/SteelBox1/Type 	= "TsBox"
+s:Ge/SM1/SteelBox1/Material = "Steel"
+d:Ge/SM1/SteelBox1/HLX 	= 19 cm
+d:Ge/SM1/SteelBox1/HLY 	= 25 cm
+d:Ge/SM1/SteelBox1/HLZ 	= 12 cm 
+
+# Copper Box 1 in Steel Box
+s:Ge/SM1/SteelBox1/CuBox1/Parent   = "SM1/SteelBox1"
+s:Ge/SM1/SteelBox1/CuBox1/Type 	   = "TsBox"
+s:Ge/SM1/SteelBox1/CuBox1/Material = "Copper"
+d:Ge/SM1/SteelBox1/CuBox1/HLX 	   = 3 cm
+d:Ge/SM1/SteelBox1/CuBox1/HLY 	   = Ge/SM1/SteelBox1/CuBox1/HLX cm
+d:Ge/SM1/SteelBox1/CuBox1/HLZ 	   = 12 cm
+d:Ge/SM1/SteelBox1/CuBox1/TransX   = 6.5 cm
+d:Ge/SM1/SteelBox1/CuBox1/TransY   = 12 cm
+
+# Copper Box 2 in Steel Box
+s:Ge/SM1/SteelBox1/CuBox2/Parent   = "SM1/SteelBox1"
+s:Ge/SM1/SteelBox1/CuBox2/Type 	   = "TsBox"
+s:Ge/SM1/SteelBox1/CuBox2/Material = "Copper"
+d:Ge/SM1/SteelBox1/CuBox2/HLX 	   = 3 cm
+d:Ge/SM1/SteelBox1/CuBox2/HLY 	   = Ge/SM1/SteelBox1/CuBox2/HLX cm
+d:Ge/SM1/SteelBox1/CuBox2/HLZ 	   = 12 cm
+d:Ge/SM1/SteelBox1/CuBox2/TransX   = -6.5 cm
+d:Ge/SM1/SteelBox1/CuBox2/TransY   = -12 cm
+
+# Copper Box 3 in Steel Box
+s:Ge/SM1/SteelBox1/CuBox3/Parent   = "SM1/SteelBox1"
+s:Ge/SM1/SteelBox1/CuBox3/Type 	   = "TsBox"
+s:Ge/SM1/SteelBox1/CuBox3/Material = "Copper"
+d:Ge/SM1/SteelBox1/CuBox3/HLX 	   = 3 cm
+d:Ge/SM1/SteelBox1/CuBox3/HLY 	   = Ge/SM1/SteelBox1/CuBox3/HLX cm
+d:Ge/SM1/SteelBox1/CuBox3/HLZ 	   = 12 cm
+d:Ge/SM1/SteelBox1/CuBox3/TransX   = 6.5 cm
+d:Ge/SM1/SteelBox1/CuBox3/TransY   = -12 cm
+
+# Copper Box 4 in Steel Box
+s:Ge/SM1/SteelBox1/CuBox4/Parent   = "SM1/SteelBox1"
+s:Ge/SM1/SteelBox1/CuBox4/Type 	   = "TsBox"
+s:Ge/SM1/SteelBox1/CuBox4/Material = "Copper"
+d:Ge/SM1/SteelBox1/CuBox4/HLX 	   = 3 cm
+d:Ge/SM1/SteelBox1/CuBox4/HLY 	   = Ge/SM1/SteelBox1/CuBox4/HLX cm
+d:Ge/SM1/SteelBox1/CuBox4/HLZ 	   = 12 cm
+d:Ge/SM1/SteelBox1/CuBox4/TransX   = -6.5 cm
+d:Ge/SM1/SteelBox1/CuBox4/TransY   = 12 cm
+
+# Dipole in Steel Box
+s:Ge/SM1/Dipole/Parent	   	= "SM1/SteelBox1"
+s:Ge/SM1/Dipole/Type  	   	= "TsBox"
+s:Ge/SM1/Dipole/Material   	= "Vacuum"  # air (World)
+s:Ge/SM1/Dipole/Field 		= "DipoleMagnet"
+d:Ge/SM1/Dipole/HLX 	   	= 3.5 cm
+d:Ge/SM1/Dipole/HLY 	   	= 9 cm
+d:Ge/SM1/Dipole/HLZ 	   	= 12 cm
+
+u:Ge/SM1/Dipole/MagneticFieldDirectionX    = 0.0
+u:Ge/SM1/Dipole/MagneticFieldDirectionY    = 1.0  
+u:Ge/SM1/Dipole/MagneticFieldDirectionZ    = 0.0
+
+s:Ge/SM1/Dipole/FieldStepper 	= "ClassicalRK4"
+d:Ge/SM1/Dipole/FieldStepMinimum = 0.5 mm
+d:Ge/SM1/Dipole/FieldDeltaChord = 2.0e-1 mm
+
+### Scanning Magnet 2 (SM2) ############################
+
+s:Ge/SM2/Message   = "Constructing IBA TsScanningMagnet2"
+s:Ge/SM2/Type	   = "TsBox"
+#s:Ge/SM2/Parent    = "World"	
+s:Ge/SM2/Material  = "Vacuum"	# air (World)
+d:Ge/SM2/HLX 	   = 40 cm 
+d:Ge/SM2/HLY 	   = Ge/SM2/HLX cm
+d:Ge/SM2/HLZ 	   = 19.5 cm
+d:Ge/SM2/TransZ    = 20.15 cm
+b:Ge/SM2/Invisible = "1"
+
+# Copper Box 1
+s:Ge/SM2/CuBox1/Parent   = "SM2"
+s:Ge/SM2/CuBox1/Type 	 = "TsBox"
+s:Ge/SM2/CuBox1/Material = "Copper"
+d:Ge/SM2/CuBox1/HLX 	 = 17.5 cm
+d:Ge/SM2/CuBox1/HLY 	 = 4.25 cm
+d:Ge/SM2/CuBox1/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox1/TransY   = 16.25 cm
+d:Ge/SM2/CuBox1/TransZ   = -15.75 cm
+
+# Copper Box 2
+s:Ge/SM2/CuBox2/Parent   = "SM2"
+s:Ge/SM2/CuBox2/Type 	 = "TsBox"
+s:Ge/SM2/CuBox2/Material = "Copper"
+d:Ge/SM2/CuBox2/HLX 	 = 17.5 cm
+d:Ge/SM2/CuBox2/HLY 	 = 4.25 cm
+d:Ge/SM2/CuBox2/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox2/TransY   = -16.25 cm
+d:Ge/SM2/CuBox2/TransZ   = -15.75 cm
+
+# Copper Box 3
+s:Ge/SM2/CuBox3/Parent   = "SM2"
+s:Ge/SM2/CuBox3/Type 	 = "TsBox"
+s:Ge/SM2/CuBox3/Material = "Copper"
+d:Ge/SM2/CuBox3/HLX 	 = 17.5 cm
+d:Ge/SM2/CuBox3/HLY 	 = 4.25 cm
+d:Ge/SM2/CuBox3/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox3/TransY   = 16.25 cm
+d:Ge/SM2/CuBox3/TransZ   = 15.75 cm
+
+# Copper Box 4
+s:Ge/SM2/CuBox4/Parent   = "SM2"
+s:Ge/SM2/CuBox4/Type 	 = "TsBox"
+s:Ge/SM2/CuBox4/Material = "Copper"
+d:Ge/SM2/CuBox4/HLX 	 = 17.5 cm
+d:Ge/SM2/CuBox4/HLY 	 = 4.25 cm
+d:Ge/SM2/CuBox4/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox4/TransY   = -16.25 cm
+d:Ge/SM2/CuBox4/TransZ   = 15.75 cm
+
+# Copper Tube 1
+s:Ge/SM2/CopperTube1/Parent   = "SM2"
+s:Ge/SM2/CopperTube1/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube1/Material = "Copper"
+d:Ge/SM2/CopperTube1/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube1/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube1/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube1/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube1/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube1/TransX   = 13.25 cm
+d:Ge/SM2/CopperTube1/TransY   = 8. cm
+d:Ge/SM2/CopperTube1/TransZ   = -12 cm
+d:Ge/SM2/CopperTube1/RotX 	  = 90 deg
+d:Ge/SM2/CopperTube1/RotY 	  = 270 deg
+
+# Copper Tube 2
+s:Ge/SM2/CopperTube2/Parent   = "SM2"
+s:Ge/SM2/CopperTube2/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube2/Material = "Copper"
+d:Ge/SM2/CopperTube2/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube2/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube2/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube2/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube2/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube2/TransX   = 13.25 cm
+d:Ge/SM2/CopperTube2/TransY   = -8 cm
+d:Ge/SM2/CopperTube2/TransZ   = -12 cm
+d:Ge/SM2/CopperTube2/RotX 	  = 90 deg
+d:Ge/SM2/CopperTube2/RotY 	  = Ge/SM2/CopperTube2/RotX deg
+
+# Copper Tube 3
+s:Ge/SM2/CopperTube3/Parent   = "SM2"
+s:Ge/SM2/CopperTube3/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube3/Material = "Copper"
+d:Ge/SM2/CopperTube3/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube3/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube3/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube3/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube3/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube3/TransX   = -13.25 cm
+d:Ge/SM2/CopperTube3/TransY   = 8 cm
+d:Ge/SM2/CopperTube3/TransZ   = -12 cm
+d:Ge/SM2/CopperTube3/RotX 	  = 90 deg
+d:Ge/SM2/CopperTube3/RotY 	  = 270 deg
+
+# Copper Tube 4
+s:Ge/SM2/CopperTube4/Parent   = "SM2"
+s:Ge/SM2/CopperTube4/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube4/Material = "Copper"
+d:Ge/SM2/CopperTube4/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube4/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube4/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube4/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube4/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube4/TransX   = -13.25 cm
+d:Ge/SM2/CopperTube4/TransY   = -8 cm
+d:Ge/SM2/CopperTube4/TransZ   = -12 cm
+d:Ge/SM2/CopperTube4/RotX 	  = 90 deg
+d:Ge/SM2/CopperTube4/RotY 	  = Ge/SM2/CopperTube4/RotX deg
+
+# Copper Tube 5
+s:Ge/SM2/CopperTube5/Parent   = "SM2"
+s:Ge/SM2/CopperTube5/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube5/Material = "Copper"
+d:Ge/SM2/CopperTube5/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube5/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube5/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube5/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube5/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube5/TransX   = 13.25 cm
+d:Ge/SM2/CopperTube5/TransY   = 8 cm
+d:Ge/SM2/CopperTube5/TransZ   = 12 cm
+d:Ge/SM2/CopperTube5/RotX 	  = -90 deg
+d:Ge/SM2/CopperTube5/RotY 	  = 90 deg
+
+# Copper Tube 6
+s:Ge/SM2/CopperTube6/Parent   = "SM2"
+s:Ge/SM2/CopperTube6/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube6/Material = "Copper"
+d:Ge/SM2/CopperTube6/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube6/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube6/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube6/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube6/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube6/TransX   = 13.25 cm
+d:Ge/SM2/CopperTube6/TransY   = -8 cm
+d:Ge/SM2/CopperTube6/TransZ   = 12 cm
+d:Ge/SM2/CopperTube6/RotX 	  = -90 deg
+d:Ge/SM2/CopperTube6/RotY 	  = 270 deg
+
+# Copper Tube 7
+s:Ge/SM2/CopperTube7/Parent   = "SM2"
+s:Ge/SM2/CopperTube7/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube7/Material = "Copper"
+d:Ge/SM2/CopperTube7/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube7/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube7/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube7/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube7/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube7/TransX   = -13.25 cm
+d:Ge/SM2/CopperTube7/TransY   = 8 cm
+d:Ge/SM2/CopperTube7/TransZ   = 12 cm
+d:Ge/SM2/CopperTube7/RotX 	  = -90 deg
+d:Ge/SM2/CopperTube7/RotY 	  = 90 deg
+
+# Copper Tube 8
+s:Ge/SM2/CopperTube8/Parent   = "SM2"
+s:Ge/SM2/CopperTube8/Type 	  = "TsCylinder"
+s:Ge/SM2/CopperTube8/Material = "Copper"
+d:Ge/SM2/CopperTube8/RMin 	  = 0 cm
+d:Ge/SM2/CopperTube8/RMax 	  = 7.5 cm
+d:Ge/SM2/CopperTube8/HL   	  = 4.25 cm
+d:Ge/SM2/CopperTube8/SPhi 	  = 0 deg
+d:Ge/SM2/CopperTube8/DPhi 	  = 90 deg
+d:Ge/SM2/CopperTube8/TransX   = -13.25 cm
+d:Ge/SM2/CopperTube8/TransY   = -8 cm
+d:Ge/SM2/CopperTube8/TransZ   = 12 cm
+d:Ge/SM2/CopperTube8/RotX 	  = -90 deg
+d:Ge/SM2/CopperTube8/RotY 	  = 270 deg
+
+# Copper Box 5
+s:Ge/SM2/CuBox5/Parent   = "SM2"
+s:Ge/SM2/CuBox5/Type 	 = "TsBox"
+s:Ge/SM2/CuBox5/Material = "Copper"
+d:Ge/SM2/CuBox5/HLX 	 = 4.25 cm
+d:Ge/SM2/CuBox5/HLY 	 = 1.75 cm
+d:Ge/SM2/CuBox5/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox5/TransX   = 13.25 cm
+d:Ge/SM2/CuBox5/TransY   = 10 cm
+d:Ge/SM2/CuBox5/TransZ   = -15.75 cm
+
+# Copper Box 6
+s:Ge/SM2/CuBox6/Parent   = "SM2"
+s:Ge/SM2/CuBox6/Type 	 = "TsBox"
+s:Ge/SM2/CuBox6/Material = "Copper"
+d:Ge/SM2/CuBox6/HLX 	 = 4.25 cm
+d:Ge/SM2/CuBox6/HLY 	 = 1.75 cm
+d:Ge/SM2/CuBox6/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox6/TransX   = 13.25 cm
+d:Ge/SM2/CuBox6/TransY   = -10 cm
+d:Ge/SM2/CuBox6/TransZ   = -15.75 cm
+
+# Copper Box 7
+s:Ge/SM2/CuBox7/Parent   = "SM2"
+s:Ge/SM2/CuBox7/Type 	 = "TsBox"
+s:Ge/SM2/CuBox7/Material = "Copper"
+d:Ge/SM2/CuBox7/HLX 	 = 4.25 cm
+d:Ge/SM2/CuBox7/HLY 	 = 1.75 cm
+d:Ge/SM2/CuBox7/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox7/TransX   = -13.25 cm
+d:Ge/SM2/CuBox7/TransY   = 10 cm
+d:Ge/SM2/CuBox7/TransZ   = -15.75 cm
+
+# Copper Box 8
+s:Ge/SM2/CuBox8/Parent 	 = "SM2"
+s:Ge/SM2/CuBox8/Type 	 = "TsBox"
+s:Ge/SM2/CuBox8/Material = "Copper"
+d:Ge/SM2/CuBox8/HLX 	 = 4.25 cm
+d:Ge/SM2/CuBox8/HLY 	 = 1.75 cm
+d:Ge/SM2/CuBox8/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox8/TransX   = -13.25 cm
+d:Ge/SM2/CuBox8/TransY   = -10 cm
+d:Ge/SM2/CuBox8/TransZ   = -15.75 cm
+
+# Copper Box 9
+s:Ge/SM2/CuBox9/Parent   = "SM2"
+s:Ge/SM2/CuBox9/Type 	 = "TsBox"
+s:Ge/SM2/CuBox9/Material = "Copper"
+d:Ge/SM2/CuBox9/HLX 	 = 4.25 cm
+d:Ge/SM2/CuBox9/HLY 	 = 1.75 cm
+d:Ge/SM2/CuBox9/HLZ 	 = 3.75 cm
+d:Ge/SM2/CuBox9/TransX   = 13.25 cm
+d:Ge/SM2/CuBox9/TransY   = 10 cm
+d:Ge/SM2/CuBox9/TransZ   = 15.75 cm
+
+# Copper Box 10
+s:Ge/SM2/CuBox10/Parent   = "SM2"
+s:Ge/SM2/CuBox10/Type 	  = "TsBox"
+s:Ge/SM2/CuBox10/Material = "Copper"
+d:Ge/SM2/CuBox10/HLX 	  = 4.25 cm
+d:Ge/SM2/CuBox10/HLY 	  = 1.75 cm
+d:Ge/SM2/CuBox10/HLZ 	  = 3.75 cm
+d:Ge/SM2/CuBox10/TransX   = 13.25 cm
+d:Ge/SM2/CuBox10/TransY   = -10 cm
+d:Ge/SM2/CuBox10/TransZ   = 15.75 cm
+
+# Copper Box 11
+s:Ge/SM2/CuBox11/Parent   = "SM2"
+s:Ge/SM2/CuBox11/Type 	  = "TsBox"
+s:Ge/SM2/CuBox11/Material = "Copper"
+d:Ge/SM2/CuBox11/HLX 	  = 4.25 cm
+d:Ge/SM2/CuBox11/HLY 	  = 1.75 cm
+d:Ge/SM2/CuBox11/HLZ 	  = 3.75 cm
+d:Ge/SM2/CuBox11/TransX   = -13.25 cm
+d:Ge/SM2/CuBox11/TransY   = 10 cm
+d:Ge/SM2/CuBox11/TransZ   = 15.75 cm
+
+# Copper Box 12
+s:Ge/SM2/CuBox12/Parent   = "SM2"
+s:Ge/SM2/CuBox12/Type 	  = "TsBox"
+s:Ge/SM2/CuBox12/Material = "Copper"
+d:Ge/SM2/CuBox12/HLX 	  = 4.25 cm
+d:Ge/SM2/CuBox12/HLY 	  = 1.75 cm
+d:Ge/SM2/CuBox12/HLZ 	  = 3.75 cm
+d:Ge/SM2/CuBox12/TransX   = -13.25 cm
+d:Ge/SM2/CuBox12/TransY   = -10 cm
+d:Ge/SM2/CuBox12/TransZ   = 15.75 cm
+
+# Steel Box 1
+s:Ge/SM2/SteelBox1/Parent   = "SM2"
+s:Ge/SM2/SteelBox1/Type 	= "TsBox"
+s:Ge/SM2/SteelBox1/Material = "Steel"
+d:Ge/SM2/SteelBox1/HLX 		= 32 cm
+d:Ge/SM2/SteelBox1/HLY 		= 23 cm
+d:Ge/SM2/SteelBox1/HLZ 		= 12 cm
+
+# Copper Box 1 in Steel Box 1
+s:Ge/SM2/SteelBox1/CuBox1/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/CuBox1/Type 	   = "TsBox"
+s:Ge/SM2/SteelBox1/CuBox1/Material = "Copper"
+d:Ge/SM2/SteelBox1/CuBox1/HLX 	   = 4.25 cm
+d:Ge/SM2/SteelBox1/CuBox1/HLY 	   = 3.75 cm
+d:Ge/SM2/SteelBox1/CuBox1/HLZ 	   = 12 cm
+d:Ge/SM2/SteelBox1/CuBox1/TransX   = 13.25 cm
+d:Ge/SM2/SteelBox1/CuBox1/TransY   = 4.25 cm
+
+# Copper Box 2 in Steel Box 1
+s:Ge/SM2/SteelBox1/CuBox2/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/CuBox2/Type 	   = "TsBox"
+s:Ge/SM2/SteelBox1/CuBox2/Material = "Copper"
+d:Ge/SM2/SteelBox1/CuBox2/HLX 	   = 4.25 cm
+d:Ge/SM2/SteelBox1/CuBox2/HLY 	   = 3.75 cm
+d:Ge/SM2/SteelBox1/CuBox2/HLZ 	   = 12 cm
+d:Ge/SM2/SteelBox1/CuBox2/TransX   = 13.25 cm
+d:Ge/SM2/SteelBox1/CuBox2/TransY   = -4.25 cm
+
+# Copper Box 3 in Steel Box 1
+s:Ge/SM2/SteelBox1/CuBox3/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/CuBox3/Type 	   = "TsBox"
+s:Ge/SM2/SteelBox1/CuBox3/Material = "Copper"
+d:Ge/SM2/SteelBox1/CuBox3/HLX 	   = 4.25 cm
+d:Ge/SM2/SteelBox1/CuBox3/HLY 	   = 3.75 cm
+d:Ge/SM2/SteelBox1/CuBox3/HLZ 	   = 12 cm
+d:Ge/SM2/SteelBox1/CuBox3/TransX   = -13.25 cm
+d:Ge/SM2/SteelBox1/CuBox3/TransY   = 4.25 cm
+
+# Copper Box 4 in Steel Box 1
+s:Ge/SM2/SteelBox1/CuBox4/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/CuBox4/Type 	   = "TsBox"
+s:Ge/SM2/SteelBox1/CuBox4/Material = "Copper"
+d:Ge/SM2/SteelBox1/CuBox4/HLX 	   = 4.25 cm
+d:Ge/SM2/SteelBox1/CuBox4/HLY 	   = 3.75 cm
+d:Ge/SM2/SteelBox1/CuBox4/HLZ 	   = 12 cm
+d:Ge/SM2/SteelBox1/CuBox4/TransX   = -13.25 cm
+d:Ge/SM2/SteelBox1/CuBox4/TransY   = -4.25 cm
+
+# Mylon Box 1 in Steel Box 1
+s:Ge/SM2/SteelBox1/MylonBox1/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/MylonBox1/Type 	  = "TsBox"
+s:Ge/SM2/SteelBox1/MylonBox1/Material = "Mylon"
+d:Ge/SM2/SteelBox1/MylonBox1/HLX 	  = 4.25 cm
+d:Ge/SM2/SteelBox1/MylonBox1/HLY 	  = 0.5 cm
+d:Ge/SM2/SteelBox1/MylonBox1/HLZ 	  = 10.5 cm
+d:Ge/SM2/SteelBox1/MylonBox1/TransX   = 13.25 cm
+
+# Mylon Box 2 in Steel Box 1
+s:Ge/SM2/SteelBox1/MylonBox2/Parent   = "SM2/SteelBox1"
+s:Ge/SM2/SteelBox1/MylonBox2/Type 	  = "TsBox"
+s:Ge/SM2/SteelBox1/MylonBox2/Material = "Mylon"
+d:Ge/SM2/SteelBox1/MylonBox2/HLX 	  = 4.25 cm
+d:Ge/SM2/SteelBox1/MylonBox2/HLY 	  = 0.5 cm
+d:Ge/SM2/SteelBox1/MylonBox2/HLZ 	  = 10.5 cm
+d:Ge/SM2/SteelBox1/MylonBox2/TransX   = -13.25 cm
+
+# Air Box 1 in Steel Box 1
+s:Ge/SM2/Dipole/Parent 	 = "SM2/SteelBox1"
+s:Ge/SM2/Dipole/Type 	 = "TsBox"
+s:Ge/SM2/Dipole/Material = "Vacuum"	# air (World)
+s:Ge/SM2/Dipole/Field 	 = "DipoleMagnet"
+d:Ge/SM2/Dipole/HLX 	 = 9 cm
+d:Ge/SM2/Dipole/HLY 	 = 7 cm
+d:Ge/SM2/Dipole/HLZ 	 = 12 cm
+
+u:Ge/SM2/Dipole/MagneticFieldDirectionX    = 1.0
+u:Ge/SM2/Dipole/MagneticFieldDirectionY    = 0.0
+u:Ge/SM2/Dipole/MagneticFieldDirectionZ    = 0.0
+
+s:Ge/SM2/Dipole/FieldStepper = "ClassicalRK4"
+d:Ge/SM2/Dipole/FieldStepMinimum = 0.5 mm
+d:Ge/SM2/Dipole/FieldDeltaChord = 2.0e-1 mm
+
+# Brass Box 1 in Steel Box 1
+s:Ge/SM2/SteelBox1/BrassBox1/Parent   = "SM2/Dipole"
+s:Ge/SM2/SteelBox1/BrassBox1/Type 	  = "TsBox"
+s:Ge/SM2/SteelBox1/BrassBox1/Material = "Brass"
+d:Ge/SM2/SteelBox1/BrassBox1/HLX 	  = .75 cm
+d:Ge/SM2/SteelBox1/BrassBox1/HLY 	  = 6.9 cm
+d:Ge/SM2/SteelBox1/BrassBox1/HLZ 	  = 12 cm
+d:Ge/SM2/SteelBox1/BrassBox1/TransX   = 8.15 cm
+
+# Brass Box 2 in Steel Box 1
+s:Ge/SM2/SteelBox1/BrassBox2/Parent   = "SM2/Dipole"
+s:Ge/SM2/SteelBox1/BrassBox2/Type 	  = "TsBox"
+s:Ge/SM2/SteelBox1/BrassBox2/Material = "Brass"
+d:Ge/SM2/SteelBox1/BrassBox2/HLX 	  = .75 cm
+d:Ge/SM2/SteelBox1/BrassBox2/HLY 	  = 6.9 cm
+d:Ge/SM2/SteelBox1/BrassBox2/HLZ 	  = 12 cm
+d:Ge/SM2/SteelBox1/BrassBox2/TransX   = -8.15 cm
+
+# Brass Box 1
+s:Ge/SM2/BrassBox1/Parent   = "SM2"
+s:Ge/SM2/BrassBox1/Type 	= "TsBox"
+s:Ge/SM2/BrassBox1/Material = "Brass"
+d:Ge/SM2/BrassBox1/HLX 		= 8.9 cm
+d:Ge/SM2/BrassBox1/HLY 		= .75 cm
+d:Ge/SM2/BrassBox1/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox1/TransY   = 8.65 cm
+d:Ge/SM2/BrassBox1/TransZ   = -13 cm
+
+# Brass Box 2
+s:Ge/SM2/BrassBox2/Parent 	= "SM2"
+s:Ge/SM2/BrassBox2/Type 	= "TsBox"
+s:Ge/SM2/BrassBox2/Material = "Brass"
+d:Ge/SM2/BrassBox2/HLX 		= 8.9 cm
+d:Ge/SM2/BrassBox2/HLY 		= .75 cm
+d:Ge/SM2/BrassBox2/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox2/TransY   = -8.65 cm
+d:Ge/SM2/BrassBox2/TransZ   = -13 cm
+
+# Brass Box 3
+s:Ge/SM2/BrassBox3/Parent   = "SM2"
+s:Ge/SM2/BrassBox3/Type 	= "TsBox"
+s:Ge/SM2/BrassBox3/Material = "Brass"
+d:Ge/SM2/BrassBox3/HLX 		= 8.9 cm
+d:Ge/SM2/BrassBox3/HLY 		= .75 cm
+d:Ge/SM2/BrassBox3/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox3/TransY   = 8.65 cm
+d:Ge/SM2/BrassBox3/TransZ   = 13 cm
+
+# Brass Box 4
+s:Ge/SM2/BrassBox4/Parent   = "SM2"
+s:Ge/SM2/BrassBox4/Type 	= "TsBox"
+s:Ge/SM2/BrassBox4/Material = "Brass"
+d:Ge/SM2/BrassBox4/HLX 		= 8.9 cm
+d:Ge/SM2/BrassBox4/HLY 		= .75 cm
+d:Ge/SM2/BrassBox4/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox4/TransY   = -8.65 cm
+d:Ge/SM2/BrassBox4/TransZ   = 13 cm
+
+# Brass Box 5
+s:Ge/SM2/BrassBox5/Parent   = "SM2"
+s:Ge/SM2/BrassBox5/Type 	= "TsBox"
+s:Ge/SM2/BrassBox5/Material = "Brass"
+d:Ge/SM2/BrassBox5/HLX 		= .75 cm
+d:Ge/SM2/BrassBox5/HLY 		= 7.9 cm
+d:Ge/SM2/BrassBox5/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox5/TransX   = 8.15 cm
+d:Ge/SM2/BrassBox5/TransZ   = -13 cm
+
+# Brass Box 6
+s:Ge/SM2/BrassBox6/Parent   = "SM2"
+s:Ge/SM2/BrassBox6/Type 	= "TsBox"
+s:Ge/SM2/BrassBox6/Material = "Brass"
+d:Ge/SM2/BrassBox6/HLX 		= .75 cm
+d:Ge/SM2/BrassBox6/HLY 		= 7.9 cm
+d:Ge/SM2/BrassBox6/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox6/TransX   = -8.15 cm
+d:Ge/SM2/BrassBox6/TransZ   = -13 cm
+
+# Brass Box 7
+s:Ge/SM2/BrassBox7/Parent   = "SM2"
+s:Ge/SM2/BrassBox7/Type 	= "TsBox"
+s:Ge/SM2/BrassBox7/Material = "Brass"
+d:Ge/SM2/BrassBox7/HLX 		= .75 cm
+d:Ge/SM2/BrassBox7/HLY 		= 7.9 cm
+d:Ge/SM2/BrassBox7/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox7/TransX   = 8.15 cm
+d:Ge/SM2/BrassBox7/TransZ   = 13 cm
+
+# Brass Box 8
+s:Ge/SM2/BrassBox8/Parent   = "SM2"
+s:Ge/SM2/BrassBox8/Type 	= "TsBox"
+s:Ge/SM2/BrassBox8/Material = "Brass"
+d:Ge/SM2/BrassBox8/HLX 		= .75 cm
+d:Ge/SM2/BrassBox8/HLY 		= 7.9 cm
+d:Ge/SM2/BrassBox8/HLZ 		= 1 cm
+d:Ge/SM2/BrassBox8/TransX   = -8.15 cm
+d:Ge/SM2/BrassBox8/TransZ   = 13 cm

@@ -1,0 +1,84 @@
+##### Constructing Snout40 cause this one is totally different from any other Snouts used in DS #####
+s:Ge/Snout/Message 			= "Constructing IBA Snout40"
+s:Ge/Snout/Parent 			= "Nozzle"
+s:Ge/Snout/Type   			= "Group"
+d:Ge/Snout/TransX 			= 0 cm
+d:Ge/Snout/TransY 			= 0 cm
+d:Ge/Snout/RotX   			= 0 deg
+d:Ge/Snout/RotY   			= 0 deg
+d:Ge/Snout/RotZ   			= 0 deg
+
+##### Round Part
+s:Ge/Snout/RoundPart/Parent 		= "Snout"
+s:Ge/Snout/RoundPart/Type   		= "TsCylinder"
+s:Ge/Snout/RoundPart/Material 		= "Brass"
+d:Ge/Snout/RoundPart/RMin  		= 19 cm
+d:Ge/Snout/RoundPart/RMax  		= 23 cm
+d:Ge/Snout/RoundPart/HL    		= 4 cm 
+d:Ge/Snout/RoundPart/SPhi  		= 0 deg
+d:Ge/Snout/RoundPart/DPhi  		= 360 deg
+d:Ge/Snout/RoundPart/TransZ		= -36 cm
+s:Ge/Snout/RoundPart/DrawingStyle 	= "Solid"
+
+##### Square Part 1
+s:Ge/Snout/SquarePart1/Parent 		= "Snout"
+s:Ge/Snout/SquarePart1/Type   		= "TsBox"
+s:Ge/Snout/SquarePart1/Material 	= "Brass"
+d:Ge/Snout/SquarePart1/HLX 		= 23 cm
+d:Ge/Snout/SquarePart1/HLY 		= 20 cm
+d:Ge/Snout/SquarePart1/HLZ 		= 7.5 cm 
+d:Ge/Snout/SquarePart1/TransZ		= -24.5 cm
+s:Ge/Snout/SquarePart1/DrawingStyle 	= "FullWireFrame"
+
+s:Ge/Snout/SquarePart1/Hole/Parent   	= "Snout/SquarePart1"
+s:Ge/Snout/SquarePart1/Hole/Type     	= "TsBox"
+s:Ge/Snout/SquarePart1/Hole/Material 	= "World"
+d:Ge/Snout/SquarePart1/Hole/HLX 	= 19 cm
+d:Ge/Snout/SquarePart1/Hole/HLY 	= 14.25 cm
+d:Ge/Snout/SquarePart1/Hole/HLZ 	= 7.5 cm 
+
+##### Square Part 2
+s:Ge/Snout/SquarePart2/Parent 		= "Snout"
+s:Ge/Snout/SquarePart2/Type   		= "TsBox"
+b:Ge/Snout/SquarePart2/IsParallel 	= "True"
+s:Ge/Snout/SquarePart2/Material 	= "Brass"
+d:Ge/Snout/SquarePart2/HLX 		= 23 cm
+d:Ge/Snout/SquarePart2/HLY 		= 20 cm #simplified
+d:Ge/Snout/SquarePart2/HLZ   		= 5.25 cm 
+d:Ge/Snout/SquarePart2/TransZ		= -11.75 cm
+s:Ge/Snout/SquarePart2/DrawingStyle 	= "FullWireFrame"
+
+s:Ge/Snout/SquarePart2/Hole/Parent   	= "Snout/SquarePart2"
+s:Ge/Snout/SquarePart2/Hole/Type     	= "TsBox"
+b:Ge/Snout/SquarePart2/Hole/IsParallel 	= "True"
+s:Ge/Snout/SquarePart2/Hole/Material 	= "World"
+d:Ge/Snout/SquarePart2/Hole/HLX 	= 19 cm  #simplified
+d:Ge/Snout/SquarePart2/Hole/HLY 	= 14.25 cm  #simplified
+d:Ge/Snout/SquarePart2/Hole/HLZ 	= 5.25 cm 
+
+##### Square Part 3
+s:Ge/Snout/SquarePart3/Parent 		= "Snout"
+s:Ge/Snout/SquarePart3/Type   		= "TsBox"
+b:Ge/Snout/SquarePart3/IsParallel 	= "True"
+s:Ge/Snout/SquarePart3/Material 	= "PVC"
+d:Ge/Snout/SquarePart3/HLX 		= 23 cm
+d:Ge/Snout/SquarePart3/HLY 		= 20 cm #simplified
+d:Ge/Snout/SquarePart3/HLZ   		= 3.25 cm 
+d:Ge/Snout/SquarePart3/TransZ		= -3.25 cm 
+s:Ge/Snout/SquarePart3/DrawingStyle 	= "FullWireFrame"
+
+s:Ge/Snout/SquarePart3/Hole/Parent   	= "Snout/SquarePart3"
+s:Ge/Snout/SquarePart3/Hole/Type     	= "TsBox"
+b:Ge/Snout/SquarePart3/Hole/IsParallel 	= "True"
+s:Ge/Snout/SquarePart3/Hole/Material 	= "World"
+d:Ge/Snout/SquarePart3/Hole/HLX 	= 19 cm  #simplified
+d:Ge/Snout/SquarePart3/Hole/HLY 	= 14.25 cm  #simplified
+d:Ge/Snout/SquarePart3/Hole/HLZ      	= 3.25 cm 
+
+##### Range Shifter (RS) 
+s:Ge/RS/Parent 				= "Snout"
+b:Ge/RS/IsParallel 			= "True"
+s:Ge/RS/Type 				= "TsCylinder"
+s:Ge/RS/Material 			= "Lexan"
+d:Ge/RS/RMax     			= Ge/Snout/SquarePart3/Hole/HLY cm
+d:Ge/RS/TransZ 				= Ge/Snout/SquarePart3/TransZ cm

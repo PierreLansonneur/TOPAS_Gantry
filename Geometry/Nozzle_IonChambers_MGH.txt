@@ -1,0 +1,454 @@
+#############################################
+# Constructing IBA Ion Chambers IC1 & IC2-3 #
+#############################################
+
+# PVC material
+sv:Ma/PVC/Components  	= 3 "Hydrogen" "Carbon" "Chlorine"
+uv:Ma/PVC/Fractions	= 3 0.048380 0.384360 0.567260
+d:Ma/PVC/Density  	= 1.3 g/cm3
+s:Ma/PVC/DefaultColor 	= "violet"
+ 
+#################
+# Ion Chamber 1 #
+#################
+s:Ge/IC1/Message   = "Constructing IBA TsIC1"
+s:Ge/IC1/Parent    = "World"
+s:Ge/IC1/Type 	   = "TsBox"
+s:Ge/IC1/Material  = "Parent"
+d:Ge/IC1/HLX 	   = 20 cm 
+d:Ge/IC1/HLY 	   = Ge/IC1/HLX cm
+d:Ge/IC1/HLZ 	   = 3 cm
+d:Ge/IC1/TransZ    = -83.775 cm
+b:Ge/IC1/Invisible = "1"
+
+# Steel Tube 1
+s:Ge/IC1/SteelTube1/Parent   	= "IC1"
+s:Ge/IC1/SteelTube1/Type 	= "TsCylinder"
+s:Ge/IC1/SteelTube1/Material 	= "Steel"
+d:Ge/IC1/SteelTube1/RMin 	= 3 cm
+d:Ge/IC1/SteelTube1/RMax 	= 7.3 cm
+d:Ge/IC1/SteelTube1/HL   	= 1.05 cm
+d:Ge/IC1/SteelTube1/SPhi 	= 0 deg
+d:Ge/IC1/SteelTube1/DPhi 	= 360 deg
+d:Ge/IC1/SteelTube1/TransZ   	= -1.95 cm
+
+# PVC Tube
+s:Ge/IC1/PVCTube/Parent   = "IC1"
+s:Ge/IC1/PVCTube/Type 	  = "TsCylinder"
+s:Ge/IC1/PVCTube/Material = "PVC"
+d:Ge/IC1/PVCTube/RMin 	  = 3 cm
+d:Ge/IC1/PVCTube/RMax 	  = 7.3 cm
+d:Ge/IC1/PVCTube/HL   	  = .25 cm
+d:Ge/IC1/PVCTube/SPhi 	  = 0 deg
+d:Ge/IC1/PVCTube/DPhi 	  = 360 deg
+d:Ge/IC1/PVCTube/TransZ   = -.65 cm
+
+# PVC Mylar Foil 1
+s:Ge/IC1/MylarFoil1/Parent   	= "IC1"
+s:Ge/IC1/MylarFoil1/Type 	= "TsCylinder"
+s:Ge/IC1/MylarFoil1/Material 	= "Mylar"
+d:Ge/IC1/MylarFoil1/RMin 	= 0 cm
+d:Ge/IC1/MylarFoil1/RMax 	= 3 cm
+d:Ge/IC1/MylarFoil1/HL   	= .00625 cm
+d:Ge/IC1/MylarFoil1/SPhi 	= 0 deg
+d:Ge/IC1/MylarFoil1/DPhi 	= 360 deg
+d:Ge/IC1/MylarFoil1/TransZ   	= -.9 cm
+
+# PVC Mylar Foil 2
+s:Ge/IC1/MylarFoil2a/Parent   	= "IC1"
+s:Ge/IC1/MylarFoil2a/Type 	= "TsCylinder"
+s:Ge/IC1/MylarFoil2a/Material 	= "Mylar"
+d:Ge/IC1/MylarFoil2a/RMin 	= 0 cm
+d:Ge/IC1/MylarFoil2a/RMax 	= 3 cm
+d:Ge/IC1/MylarFoil2a/HL   	= .003125 cm
+d:Ge/IC1/MylarFoil2a/SPhi 	= 0 deg
+d:Ge/IC1/MylarFoil2a/DPhi 	= 360 deg
+d:Ge/IC1/MylarFoil2a/TransZ   	= -.403125 cm
+
+# PVC Mylar Foil 2
+s:Ge/IC1/MylarFoil2b/Parent	= "IC1/AirTube1"
+s:Ge/IC1/MylarFoil2b/Type 	= "TsCylinder"
+s:Ge/IC1/MylarFoil2b/Material 	= "Mylar"
+d:Ge/IC1/MylarFoil2b/RMin 	= 0 cm
+d:Ge/IC1/MylarFoil2b/RMax 	= 3 cm
+d:Ge/IC1/MylarFoil2b/HL   	= .003125 cm
+d:Ge/IC1/MylarFoil2b/SPhi 	= 0 deg
+d:Ge/IC1/MylarFoil2b/DPhi 	= 360 deg
+d:Ge/IC1/MylarFoil2b/TransZ  	= -.246875 cm
+
+# Alu Tube 1
+s:Ge/IC1/AluTube1/Parent   = "IC1"
+s:Ge/IC1/AluTube1/Type 	   = "TsCylinder"
+s:Ge/IC1/AluTube1/Material = "Aluminum"
+d:Ge/IC1/AluTube1/RMin 	   = 3 cm
+d:Ge/IC1/AluTube1/RMax 	   = 8.8 cm
+d:Ge/IC1/AluTube1/HL   	   = .25 cm		
+d:Ge/IC1/AluTube1/SPhi 	   = 0 deg
+d:Ge/IC1/AluTube1/DPhi 	   = 360 deg
+d:Ge/IC1/AluTube1/TransZ   = -.15 cm
+
+# Air Tube 1
+s:Ge/IC1/AirTube1/Parent   = "IC1"
+s:Ge/IC1/AirTube1/Type 	   = "TsCylinder"
+s:Ge/IC1/AirTube1/Material = "World"
+d:Ge/IC1/AirTube1/RMin     = 0 cm
+d:Ge/IC1/AirTube1/RMax 	   = 3 cm
+d:Ge/IC1/AirTube1/HL   	   = .25 cm
+d:Ge/IC1/AirTube1/SPhi 	   = 0 deg
+d:Ge/IC1/AirTube1/DPhi 	   = 360 deg
+d:Ge/IC1/AirTube1/TransZ   = -.15 cm
+
+# Alu Tube 2
+s:Ge/IC1/AluTube2/Parent   = "IC1"
+s:Ge/IC1/AluTube2/Type 	   = "TsCylinder"
+s:Ge/IC1/AluTube2/Material = "Aluminum"
+d:Ge/IC1/AluTube2/RMin 	   = 5.2 cm
+d:Ge/IC1/AluTube2/RMax 	   = 8.8 cm
+d:Ge/IC1/AluTube2/HL   	   = .1 cm
+d:Ge/IC1/AluTube2/SPhi 	   = 0 deg
+d:Ge/IC1/AluTube2/DPhi 	   = 360 deg
+d:Ge/IC1/AluTube2/TransZ   = .2 cm
+
+# Air Tube 2
+s:Ge/IC1/AirTube2/Parent   = "IC1"
+s:Ge/IC1/AirTube2/Type 	   = "TsCylinder"
+s:Ge/IC1/AirTube2/Material = "World"
+d:Ge/IC1/AirTube2/RMin 	   = 0 cm
+d:Ge/IC1/AirTube2/RMax 	   = 5.2 cm
+d:Ge/IC1/AirTube2/HL   	   = .1 cm
+d:Ge/IC1/AirTube2/SPhi 	   = 0 deg
+d:Ge/IC1/AirTube2/DPhi 	   = 360 deg
+d:Ge/IC1/AirTube2/TransZ   = .2 cm
+
+# Alu Tube 3
+s:Ge/IC1/AluTube3/Parent   = "IC1"
+s:Ge/IC1/AluTube3/Type 	   = "TsCylinder"
+s:Ge/IC1/AluTube3/Material = "Aluminum"
+d:Ge/IC1/AluTube3/RMin 	   = 7.5 cm
+d:Ge/IC1/AluTube3/RMax 	   = 8.8 cm
+d:Ge/IC1/AluTube3/HL   	   = .85 cm
+d:Ge/IC1/AluTube3/SPhi 	   = 0 deg
+d:Ge/IC1/AluTube3/DPhi 	   = 360 deg
+d:Ge/IC1/AluTube3/TransZ   = 1.15 cm
+
+# Air Tube 3
+s:Ge/IC1/AirTube3/Parent   = "IC1"
+s:Ge/IC1/AirTube3/Type 	   = "TsCylinder"
+s:Ge/IC1/AirTube3/Material = "World"
+d:Ge/IC1/AirTube3/RMin 	   = 0 cm
+d:Ge/IC1/AirTube3/RMax 	   = 7.5 cm
+d:Ge/IC1/AirTube3/HL   	   = .85 cm
+d:Ge/IC1/AirTube3/SPhi 	   = 0 deg
+d:Ge/IC1/AirTube3/DPhi 	   = 360 deg
+d:Ge/IC1/AirTube3/TransZ   = 1.15 cm
+
+# Air Tube 3 Alu Foil
+s:Ge/IC1/AluFoil/Parent   = "IC1/AirTube3"
+s:Ge/IC1/AluFoil/Type 	  = "TsCylinder"
+s:Ge/IC1/AluFoil/Material = "Aluminum"
+d:Ge/IC1/AluFoil/RMin     = 0 cm
+d:Ge/IC1/AluFoil/RMax 	  = 5 cm
+d:Ge/IC1/AluFoil/HL   	  = 0.0001565 cm # Valeur à modifier pour fit avec polynôme de référence (v/8)
+d:Ge/IC1/AluFoil/SPhi 	  = 0 deg
+d:Ge/IC1/AluFoil/DPhi 	  = 360 deg
+d:Ge/IC1/AluFoil/TransZ   = .3 cm
+
+# Air Tube 3 Mylar Foil 3
+s:Ge/IC1/MylarFoil3/Parent   = "IC1/AirTube3"
+s:Ge/IC1/MylarFoil3/Type 	 = "TsCylinder"
+s:Ge/IC1/MylarFoil3/Material = "Mylar"
+d:Ge/IC1/MylarFoil3/RMin 	 = 0 cm
+d:Ge/IC1/MylarFoil3/RMax 	 = 5 cm
+d:Ge/IC1/MylarFoil3/HL   	 = 0.0001565 cm 	# identique à la valeur pour l'Air Tube 3 Alu Foil (attention si modif)
+d:Ge/IC1/MylarFoil3/SPhi 	 = 0 deg
+d:Ge/IC1/MylarFoil3/DPhi 	 = 360 deg
+
+# Air Tube 3 Mylar Foil 4
+s:Ge/IC1/MylarFoil4/Parent   = "IC1/AirTube3"
+s:Ge/IC1/MylarFoil4/Type 	 = "TsCylinder"
+s:Ge/IC1/MylarFoil4/Material = "Mylar"
+d:Ge/IC1/MylarFoil4/RMin 	 = 0 cm
+d:Ge/IC1/MylarFoil4/RMax 	 = 5 cm
+d:Ge/IC1/MylarFoil4/HL   	 = 0.0001565 cm		# identique à la valeur pour l'Air Tube 3 Alu Foil (attention si modif)
+d:Ge/IC1/MylarFoil4/SPhi 	 = 0 deg
+d:Ge/IC1/MylarFoil4/DPhi 	 = 360 deg
+d:Ge/IC1/MylarFoil4/TransZ   = 0.6 cm
+
+# Alu Tube 4
+s:Ge/IC1/AluTube4/Parent   = "IC1"
+s:Ge/IC1/AluTube4/Type 	   = "TsCylinder"
+s:Ge/IC1/AluTube4/Material = "Aluminum"
+d:Ge/IC1/AluTube4/RMin 	   = 3.5 cm
+d:Ge/IC1/AluTube4/RMax 	   = 8.8 cm
+d:Ge/IC1/AluTube4/HL   	   = .35 cm
+d:Ge/IC1/AluTube4/SPhi 	   = 0 deg
+d:Ge/IC1/AluTube4/DPhi 	   = 360 deg
+d:Ge/IC1/AluTube4/TransZ   = 2.35 cm
+
+# Air Tube 4
+s:Ge/IC1/AirTube4/Parent   = "IC1"
+s:Ge/IC1/AirTube4/Type 	   = "TsCylinder"
+s:Ge/IC1/AirTube4/Material = "World"
+d:Ge/IC1/AirTube4/RMin 	   = 0 cm
+d:Ge/IC1/AirTube4/RMax 	   = 3.5 cm
+d:Ge/IC1/AirTube4/HL   	   = .35 cm
+d:Ge/IC1/AirTube4/SPhi 	   = 0 deg
+d:Ge/IC1/AirTube4/DPhi 	   = 360 deg
+d:Ge/IC1/AirTube4/TransZ   = 2.35 cm
+
+# Air Tube 4 Mylar Foil 5
+s:Ge/IC1/MylarFoil5/Parent   = "IC1/AirTube4"
+s:Ge/IC1/MylarFoil5/Type 	 = "TsCylinder"
+s:Ge/IC1/MylarFoil5/Material = "Mylar"
+d:Ge/IC1/MylarFoil5/RMin 	 = 0 cm
+d:Ge/IC1/MylarFoil5/RMax 	 = 3.5 cm
+d:Ge/IC1/MylarFoil5/HL   	 = .00125 cm
+d:Ge/IC1/MylarFoil5/SPhi 	 = 0 deg
+d:Ge/IC1/MylarFoil5/DPhi 	 = 360 deg
+d:Ge/IC1/MylarFoil5/TransZ   = .34875 cm
+
+# Steel Tube 2
+s:Ge/IC1/SteelTube2/Parent   = "IC1"
+s:Ge/IC1/SteelTube2/Type 	 = "TsCylinder"
+s:Ge/IC1/SteelTube2/Material = "Steel"
+d:Ge/IC1/SteelTube2/RMin 	 = 3.5 cm
+d:Ge/IC1/SteelTube2/RMax 	 = 8.8 cm
+d:Ge/IC1/SteelTube2/HL   	 = .15 cm
+d:Ge/IC1/SteelTube2/SPhi 	 = 0 deg
+d:Ge/IC1/SteelTube2/DPhi 	 = 360 deg
+d:Ge/IC1/SteelTube2/TransZ   = 2.85 cm
+
+#################
+# Ion Chamber 2 #
+#################
+s:Ge/IC2/Constructing = "Constructing IBA TsIC2"
+s:Ge/IC2/Parent		  = "World"
+s:Ge/IC2/Type  		  = "TsBox"
+s:Ge/IC2/Material 	  = "Parent"
+d:Ge/IC2/HLX 		  = 24.5 cm 
+d:Ge/IC2/HLY 		  = 30 cm
+d:Ge/IC2/HLZ 		  = 5.5 cm
+d:Ge/IC2/TransZ		  = 83.775 cm
+b:Ge/IC2/Invisible 	  = "1"
+
+# Alu Box 1
+s:Ge/IC2/AluBox1/Parent   = "IC2"
+s:Ge/IC2/AluBox1/Type 	  = "TsBox"
+s:Ge/IC2/AluBox1/Material = "Aluminum"
+d:Ge/IC2/AluBox1/HLX 	  = 18 cm
+d:Ge/IC2/AluBox1/HLY 	  = Ge/IC2/AluBox1/HLX cm
+d:Ge/IC2/AluBox1/HLZ	  = 2.3 cm	
+d:Ge/IC2/AluBox1/TransZ   = -2.7 cm
+
+# Air Box 1
+s:Ge/IC2/AirBox1/Parent   = "IC2/AluBox1"
+s:Ge/IC2/AirBox1/Type 	  = "TsBox"
+s:Ge/IC2/AirBox1/Material = "World"
+d:Ge/IC2/AirBox1/HLX 	  = 10.5 cm
+d:Ge/IC2/AirBox1/HLY 	  = Ge/IC2/AirBox1/HLX  cm
+d:Ge/IC2/AirBox1/HLZ 	  = .2 cm	
+d:Ge/IC2/AirBox1/TransZ   = -2.1 cm
+
+# Air Box 2
+s:Ge/IC2/AirBox2/Parent   = "IC2/AluBox1"
+s:Ge/IC2/AirBox2/Type 	  = "TsBox"
+s:Ge/IC2/AirBox2/Material = "World"
+d:Ge/IC2/AirBox2/HLX 	  = 10.5 cm
+d:Ge/IC2/AirBox2/HLY 	  = Ge/IC2/AirBox2/HLX cm
+d:Ge/IC2/AirBox2/HLZ 	  = .3 cm
+d:Ge/IC2/AirBox2/TransZ   = -1.6 cm
+
+# Mylar Box 1
+s:Ge/IC2/MylarBox1/Parent   = "IC2/AirBox2"
+s:Ge/IC2/MylarBox1/Type 	= "TsBox"
+s:Ge/IC2/MylarBox1/Material = "Mylar"
+d:Ge/IC2/MylarBox1/HLX 		= 10.5 cm
+d:Ge/IC2/MylarBox1/HLY 		= Ge/IC2/MylarBox1/HLX cm
+d:Ge/IC2/MylarBox1/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox1/TransZ   = -.29875 cm
+
+# Air Box 3
+s:Ge/IC2/AirBox3/Parent   = "IC2/AluBox1"
+s:Ge/IC2/AirBox3/Type 	  = "TsBox"
+s:Ge/IC2/AirBox3/Material = "World"
+d:Ge/IC2/AirBox3/HLX 	  = 16. cm
+d:Ge/IC2/AirBox3/HLY 	  = Ge/IC2/AirBox3/HLX cm
+d:Ge/IC2/AirBox3/HLZ 	  = 1.8 cm
+d:Ge/IC2/AirBox3/TransZ   = .5 cm
+
+# Dosimetry for Scanning
+s:Ge/IC2/S1StripDosimetry/Parent 	  = "IC2/AirBox3"
+s:Ge/IC2/S1StripDosimetry/Type 		  = "TsBox"
+s:Ge/IC2/S1StripDosimetry/Material 	  = "World"
+d:Ge/IC2/S1StripDosimetry/HLX 		  = 10 cm
+d:Ge/IC2/S1StripDosimetry/HLY 		  = Ge/IC2/S1StripDosimetry/HLX cm
+d:Ge/IC2/S1StripDosimetry/HLZ 		  = .49875 cm
+d:Ge/IC2/S1StripDosimetry/TransZ 	  = .4 cm
+d:Ge/IC2/S1StripDosimetry/MaxStepSize = 100 mm
+
+# Air Tube for dosimet
+s:Ge/IC2/AirDosimetryTube/Parent 	  = "IC2/AirBox3"
+s:Ge/IC2/AirDosimetryTube/Type 		  = "TsCylinder"
+s:Ge/IC2/AirDosimetryTube/Material    = "World"
+d:Ge/IC2/AirDosimetryTube/RMin 		  = 0 cm
+d:Ge/IC2/AirDosimetryTube/RMax 		  = 1 cm
+d:Ge/IC2/AirDosimetryTube/HL 		  = .49875 cm
+d:Ge/IC2/AirDosimetryTube/SPhi 		  = 0 deg
+d:Ge/IC2/AirDosimetryTube/DPhi 		  = 360 deg
+d:Ge/IC2/AirDosimetryTube/TransZ 	  = -.6 cm
+d:Ge/IC2/AirDosimetryTube/MaxStepSize = .25 mm
+
+# Mylar Box 2
+s:Ge/IC2/MylarBox2/Parent   = "IC2/AirBox3"
+s:Ge/IC2/MylarBox2/Type 	= "TsBox"
+s:Ge/IC2/MylarBox2/Material = "Mylar"
+d:Ge/IC2/MylarBox2/HLX 		= 12 cm
+d:Ge/IC2/MylarBox2/HLY 		= Ge/IC2/MylarBox2/HLX cm
+d:Ge/IC2/MylarBox2/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox2/TransZ   = -1.1 cm
+
+# Alu Box 2
+s:Ge/IC2/AluBox2/Parent   = "IC2/AirBox3"
+s:Ge/IC2/AluBox2/Type 	  = "TsBox"
+s:Ge/IC2/AluBox2/Material = "Aluminum"
+d:Ge/IC2/AluBox2/HLX 	  = 12 cm
+d:Ge/IC2/AluBox2/HLY 	  = Ge/IC2/AluBox2/HLX cm
+d:Ge/IC2/AluBox2/HLZ 	  = .00125 cm
+d:Ge/IC2/AluBox2/TransZ   = -.1 cm
+
+# Mylar Box 3
+s:Ge/IC2/MylarBox3/Parent   = "IC2/AirBox3"
+s:Ge/IC2/MylarBox3/Type 	= "TsBox"
+s:Ge/IC2/MylarBox3/Material = "Mylar"
+d:Ge/IC2/MylarBox3/HLX 		= 12 cm
+d:Ge/IC2/MylarBox3/HLY 		= Ge/IC2/MylarBox3/HLX cm
+d:Ge/IC2/MylarBox3/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox3/TransZ   = .9 cm
+
+# Mylar Box 4
+s:Ge/IC2/MylarBox4/Parent   = "IC2/AirBox3"
+s:Ge/IC2/MylarBox4/Type 	= "TsBox"
+s:Ge/IC2/MylarBox4/Material = "Mylar"
+d:Ge/IC2/MylarBox4/HLX 		= 12 cm
+d:Ge/IC2/MylarBox4/HLY 		= Ge/IC2/MylarBox4/HLX cm
+d:Ge/IC2/MylarBox4/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox4/TransZ   = 1.79875 cm
+
+# PVC Box
+s:Ge/IC2/PVCBox/Parent   = "IC2"
+s:Ge/IC2/PVCBox/Type 	 = "TsBox"
+s:Ge/IC2/PVCBox/Material = "PVC"
+d:Ge/IC2/PVCBox/HLX 	 = 24.5 cm
+d:Ge/IC2/PVCBox/HLY 	 = 30 cm
+d:Ge/IC2/PVCBox/HLZ 	 = .4 cm
+
+# Air Box 4
+s:Ge/IC2/AirBox4/Parent   = "IC2/PVCBox"
+s:Ge/IC2/AirBox4/Type 	  = "TsBox"
+s:Ge/IC2/AirBox4/Material = "World"
+d:Ge/IC2/AirBox4/HLX 	  = 14 cm
+d:Ge/IC2/AirBox4/HLY 	  = Ge/IC2/AirBox4/HLX cm
+d:Ge/IC2/AirBox4/HLZ 	  = .4 cm
+
+# Alu Box 3
+s:Ge/IC2/AluBox3/Parent   = "IC2"
+s:Ge/IC2/AluBox3/Type 	  = "TsBox"
+s:Ge/IC2/AluBox3/Material = "Aluminum"
+d:Ge/IC2/AluBox3/HLX 	  = 18 cm
+d:Ge/IC2/AluBox3/HLY 	  = Ge/IC2/AluBox3/HLX cm
+d:Ge/IC2/AluBox3/HLZ 	  = 2.3 cm
+d:Ge/IC2/AluBox3/TransZ   = 2.7 cm
+
+# Air Box 5
+s:Ge/IC2/AirBox5/Parent   = "IC2/AluBox3"
+s:Ge/IC2/AirBox5/Type 	  = "TsBox"
+s:Ge/IC2/AirBox5/Material = "World"
+d:Ge/IC2/AirBox5/HLX 	  = 16 cm
+d:Ge/IC2/AirBox5/HLY 	  = Ge/IC2/AirBox5/HLX cm
+d:Ge/IC2/AirBox5/HLZ 	  = 1.8 cm
+d:Ge/IC2/AirBox5/TransZ   = -.5 cm
+
+# Dosimetry for Scanning
+s:Ge/IC2/IONC3_dosimetry/Parent   	 = "IC2/AirBox5"
+s:Ge/IC2/IONC3_dosimetry/Type     	 = "TsCylinder"
+s:Ge/IC2/IONC3_dosimetry/Material 	 = "World"
+d:Ge/IC2/IONC3_dosimetry/RMin   	 = 0 cm
+d:Ge/IC2/IONC3_dosimetry/RMax   	 = 1 cm
+d:Ge/IC2/IONC3_dosimetry/HL     	 = .49875 cm
+d:Ge/IC2/IONC3_dosimetry/SPhi 		 = 0 deg
+d:Ge/IC2/IONC3_dosimetry/DPhi 		 = 360 deg
+d:Ge/IC2/IONC3_dosimetry/TransZ 	 = -.4 cm
+d:Ge/IC2/IONC3_dosimetry/MaxStepSize = 100 mm
+
+# Dosimetry for Scanning
+s:Ge/IC2/S4StripDosimetry/Parent   	  = "IC2/AirBox5"
+s:Ge/IC2/S4StripDosimetry/Type 	   	  = "TsBox"
+s:Ge/IC2/S4StripDosimetry/Material 	  = "World"
+d:Ge/IC2/S4StripDosimetry/HLX 	   	  = 10 cm
+d:Ge/IC2/S4StripDosimetry/HLY 	   	  = Ge/IC2/S4StripDosimetry/HLX cm
+d:Ge/IC2/S4StripDosimetry/HLZ 	   	  = .49875 cm
+d:Ge/IC2/S4StripDosimetry/TransZ   	  = .6 cm
+d:Ge/IC2/S4StripDosimetry/MaxStepSize = 100 mm
+
+# Mylar Box 5
+s:Ge/IC2/MylarBox5/Parent   = "IC2/AirBox5"
+s:Ge/IC2/MylarBox5/Type 	= "TsBox"
+s:Ge/IC2/MylarBox5/Material = "Mylar"
+d:Ge/IC2/MylarBox5/HLX 		= 12 cm
+d:Ge/IC2/MylarBox5/HLY 		= Ge/IC2/MylarBox5/HLX cm
+d:Ge/IC2/MylarBox5/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox5/TransZ   = -.9 cm
+
+# Alu Box 4
+s:Ge/IC2/AluBox4/Parent   = "IC2/AirBox5"
+s:Ge/IC2/AluBox4/Type 	  = "TsBox"
+s:Ge/IC2/AluBox4/Material = "Aluminum"
+d:Ge/IC2/AluBox4/HLX 	  = 12 cm
+d:Ge/IC2/AluBox4/HLY 	  = Ge/IC2/AluBox4/HLX cm
+d:Ge/IC2/AluBox4/HLZ 	  = .00125 cm
+d:Ge/IC2/AluBox4/TransZ   = .1 cm
+
+# Mylar Box 6
+s:Ge/IC2/MylarBox6/Parent   = "IC2/AirBox5"
+s:Ge/IC2/MylarBox6/Type 	= "TsBox"
+s:Ge/IC2/MylarBox6/Material = "Mylar"
+d:Ge/IC2/MylarBox6/HLX 		= 12 cm
+d:Ge/IC2/MylarBox6/HLY 		= Ge/IC2/MylarBox6/HLX cm
+d:Ge/IC2/MylarBox6/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox6/TransZ   = 1.1 cm
+
+# Mylar Box 7
+s:Ge/IC2/MylarBox7/Parent   = "IC2/AirBox5"
+s:Ge/IC2/MylarBox7/Type 	= "TsBox"
+s:Ge/IC2/MylarBox7/Material = "Mylar"
+d:Ge/IC2/MylarBox7/HLX 		= 12 cm
+d:Ge/IC2/MylarBox7/HLY 		= Ge/IC2/MylarBox7/HLX cm
+d:Ge/IC2/MylarBox7/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox7/TransZ   = -1.79875 cm
+
+# Air Box 6
+s:Ge/IC2/AirBox6/Parent   = "IC2/AluBox3"
+s:Ge/IC2/AirBox6/Type 	  = "TsBox"
+s:Ge/IC2/AirBox6/Material = "World"
+d:Ge/IC2/AirBox6/HLX 	  = 10.5 cm
+d:Ge/IC2/AirBox6/HLY 	  = Ge/IC2/AirBox6/HLX cm
+d:Ge/IC2/AirBox6/HLZ 	  = .3 cm
+d:Ge/IC2/AirBox6/TransZ   = 1.6 cm
+
+# Air Box 7
+s:Ge/IC2/AirBox7/Parent   = "IC2/AluBox3"
+s:Ge/IC2/AirBox7/Type 	  = "TsBox"
+s:Ge/IC2/AirBox7/Material = "World"
+d:Ge/IC2/AirBox7/HLX 	  = 10.5 cm
+d:Ge/IC2/AirBox7/HLY 	  = Ge/IC2/AirBox7/HLX cm
+d:Ge/IC2/AirBox7/HLZ 	  = .2 cm
+d:Ge/IC2/AirBox7/TransZ   = 2.1 cm
+
+# Mylar Box 8
+s:Ge/IC2/MylarBox8/Parent   = "IC2/AirBox6"
+s:Ge/IC2/MylarBox8/Type 	= "TsBox"
+s:Ge/IC2/MylarBox8/Material = "Mylar"
+d:Ge/IC2/MylarBox8/HLX 		= 10.5 cm
+d:Ge/IC2/MylarBox8/HLY 		= Ge/IC2/MylarBox8/HLX cm
+d:Ge/IC2/MylarBox8/HLZ 		= .00125 cm
+d:Ge/IC2/MylarBox8/TransZ   = .29875 cm

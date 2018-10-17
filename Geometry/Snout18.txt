@@ -1,0 +1,91 @@
+##### Snout : a group of components
+s:Ge/Snout/Message 		= "Constructing Size 18 IBA Snout"
+s:Ge/Snout/Parent 		= "Nozzle"
+s:Ge/Snout/Type   		= "Group"
+d:Ge/Snout/TransX 		= 0 cm
+d:Ge/Snout/TransY 		= 0 cm
+d:Ge/Snout/RotX 		= 0 deg
+d:Ge/Snout/RotY 		= 0 deg
+d:Ge/Snout/RotZ 		= 0 deg
+d:Ge/Snout/SPhi 		= 0 deg
+d:Ge/Snout/DPhi 		= 360 deg
+
+### Snout: Brass Tube 1
+s:Ge/Snout/BrassTube1/Parent 	= "Snout"
+s:Ge/Snout/BrassTube1/Type   	= "TsCylinder"
+s:Ge/Snout/BrassTube1/Material	= "Brass"
+d:Ge/Snout/BrassTube1/RMin 	=  9.5 cm
+d:Ge/Snout/BrassTube1/RMax 	= 23.2 cm
+d:Ge/Snout/BrassTube1/HL	=  3.25 cm
+d:Ge/Snout/BrassTube1/TransX 	=  0 cm
+d:Ge/Snout/BrassTube1/TransY 	=  0 cm
+d:Ge/Snout/BrassTube1/TransZ 	= -12.6 cm
+d:Ge/Snout/BrassTube1/RotX 	=  0 deg
+d:Ge/Snout/BrassTube1/RotY 	=  0 deg
+d:Ge/Snout/BrassTube1/RotZ 	=  0 deg
+d:Ge/Snout/BrassTube1/SPhi 	=  0 deg
+d:Ge/Snout/BrassTube1/DPhi 	=  360 deg
+
+### Snout: Brass Cone 1
+s:Ge/Snout/BrassCone1/Parent 	= "Snout"
+s:Ge/Snout/BrassCone1/Type   	= "G4Cons"
+s:Ge/Snout/BrassCone1/Material	= "Brass"
+d:Ge/Snout/BrassCone1/RMin1 	= 10.1 cm
+d:Ge/Snout/BrassCone1/RMax1 	= 12.0 cm
+d:Ge/Snout/BrassCone1/RMin2 	=  9.5 cm
+d:Ge/Snout/BrassCone1/RMax2 	= 12.0 cm
+d:Ge/Snout/BrassCone1/HL	= 3.15 cm
+d:Ge/Snout/BrassCone1/TransX 	= 0 cm
+d:Ge/Snout/BrassCone1/TransY 	= 0 cm
+d:Ge/Snout/BrassCone1/TransZ 	= -6.2 cm
+d:Ge/Snout/BrassCone1/RotX 	= 0 deg
+d:Ge/Snout/BrassCone1/RotY 	= 0 deg
+d:Ge/Snout/BrassCone1/RotZ 	= 0 deg
+d:Ge/Snout/BrassCone1/SPhi 	= 0 deg
+d:Ge/Snout/BrassCone1/DPhi 	= 360 deg
+
+### Snout: Brass Cone 2
+s:Ge/Snout/BrassCone2/Parent 	= "Snout"
+s:Ge/Snout/BrassCone2/Type   	= "G4Cons"
+b:Ge/Snout/BrassCone2/IsParallel = "True"
+s:Ge/Snout/BrassCone2/Material	= "Brass"
+d:Ge/Snout/BrassCone2/RMin1 	= 9.5 cm
+d:Ge/Snout/BrassCone2/RMax1 	= 12.0 cm
+d:Ge/Snout/BrassCone2/RMin2 	= 8.15 cm
+d:Ge/Snout/BrassCone2/RMax2 	= 12.0 cm
+d:Ge/Snout/BrassCone2/HL	= 6.2 cm
+d:Ge/Snout/BrassCone2/TransX 	= 0 cm
+d:Ge/Snout/BrassCone2/TransY 	= 0 cm
+d:Ge/Snout/BrassCone2/TransZ 	= 3.15 cm
+d:Ge/Snout/BrassCone2/RotX 	= 0 deg
+d:Ge/Snout/BrassCone2/RotY 	= 0 deg
+d:Ge/Snout/BrassCone2/RotZ 	= 0 deg
+d:Ge/Snout/BrassCone2/SPhi 	= 0 deg
+d:Ge/Snout/BrassCone2/DPhi 	= 360 deg
+
+### Snout: Brass Cone 3
+s:Ge/Snout/BrassCone3/Parent 	= "Snout"
+s:Ge/Snout/BrassCone3/Type   	= "G4Cons"
+b:Ge/Snout/BrassCone3/IsParallel = "True"
+s:Ge/Snout/BrassCone3/Material	= "Brass"
+d:Ge/Snout/BrassCone3/RMin1 	= 7.65 cm
+d:Ge/Snout/BrassCone3/RMax1 	= 10.2 cm
+d:Ge/Snout/BrassCone3/RMin2 	= 7.94 cm
+d:Ge/Snout/BrassCone3/RMax2 	= 10.2 cm
+d:Ge/Snout/BrassCone3/HL	= 3.25 cm
+d:Ge/Snout/BrassCone3/TransX 	= 0 cm
+d:Ge/Snout/BrassCone3/TransY 	= 0 cm
+d:Ge/Snout/BrassCone3/TransZ 	= 12.6 cm
+d:Ge/Snout/BrassCone3/RotX 	= 0 deg
+d:Ge/Snout/BrassCone3/RotY 	= 0 deg
+d:Ge/Snout/BrassCone3/RotZ 	= 0 deg
+d:Ge/Snout/BrassCone3/SPhi 	= 0 deg
+d:Ge/Snout/BrassCone3/DPhi 	= 360 deg
+
+### Range Shifter
+s:Ge/RS/Parent   		= "Snout"
+b:Ge/RS/IsParallel 		= "True"
+s:Ge/RS/Type     		= "TsCylinder"
+s:Ge/RS/Material 		= "Lexan"
+d:Ge/RS/RMax     		= Ge/Snout/BrassCone3/RMin1 cm
+d:Ge/RS/TransZ 			= Ge/Snout/BrassCone3/TransZ cm # 12.6 cm

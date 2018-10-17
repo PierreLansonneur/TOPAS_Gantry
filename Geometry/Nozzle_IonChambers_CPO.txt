@@ -1,0 +1,654 @@
+
+# PVC material
+sv:Ma/PVC/Components  	= 3 "Hydrogen" "Carbon" "Chlorine"
+uv:Ma/PVC/Fractions	= 3 0.048380 0.384360 0.567260
+d:Ma/PVC/Density  	= 1.3 g/cm3
+s:Ma/PVC/DefaultColor 	= "violet"
+
+############ Constructing Iba's IC1 
+### First group : other elements than X&Y wires
+s:Ge/IC1/Message   = "Constructing IBA TsIC1"
+s:Ge/IC1/Parent    = "World"
+s:Ge/IC1/Type 	   = "TsBox"
+#s:Ge/IC1/Material  = "Parent"
+s:Ge/IC1/Material   = "Air"
+d:Ge/IC1/HLX 	   = 25 cm 
+d:Ge/IC1/HLY 	   = Ge/IC1/HLX cm
+d:Ge/IC1/HLZ 	   = 3 cm
+#d:Ge/IC1/TransZ    = -83.775 cm
+b:Ge/IC1/Invisible = "1"
+
+### Entrance Window
+s:Ge/IC1/EntranceWindow/Parent   = "IC1"
+s:Ge/IC1/EntranceWindow/Type     = "TsBox"
+s:Ge/IC1/EntranceWindow/Material = "Kapton"
+d:Ge/IC1/EntranceWindow/HLX 	   = Ge/IC1/HLX cm
+d:Ge/IC1/EntranceWindow/HLY 	   = Ge/IC1/HLY cm
+d:Ge/IC1/EntranceWindow/HLZ 	   = 0.0125 mm	# 25 um
+d:Ge/IC1/EntranceWindow/TransZ   = -13.0435 mm
+
+### High voltage components
+# HV : aluminium foil before (BEF) mylar foil
+s:Ge/IC1/HVAluminumBEF/Parent   = "IC1"
+s:Ge/IC1/HVAluminumBEF/Type     = "TsBox"
+s:Ge/IC1/HVAluminumBEF/Material = "Aluminum"
+d:Ge/IC1/HVAluminumBEF/HLX 	  = Ge/IC1/HLX cm
+d:Ge/IC1/HVAluminumBEF/HLY 	  = Ge/IC1/HLY cm
+d:Ge/IC1/HVAluminumBEF/HLZ 	  = 0.000013 mm
+d:Ge/IC1/HVAluminumBEF/TransZ   = -10.006013 mm
+
+# HV : aluminium foil after (AFT) mylar foil
+s:Ge/IC1/HVAluminumAFT/Parent   = "IC1"
+s:Ge/IC1/HVAluminumAFT/Type     = "TsBox"
+s:Ge/IC1/HVAluminumAFT/Material = "Aluminum"
+d:Ge/IC1/HVAluminumAFT/HLX 	  = Ge/IC1/HLX cm
+d:Ge/IC1/HVAluminumAFT/HLY 	  = Ge/IC1/HLY cm
+d:Ge/IC1/HVAluminumAFT/HLZ 	  = 0.000013 mm
+d:Ge/IC1/HVAluminumAFT/TransZ   = 10.006013 mm
+
+### Exit Window
+s:Ge/IC1/ExitWindow/Parent   = "IC1"
+s:Ge/IC1/ExitWindow/Type     = "TsBox"
+s:Ge/IC1/ExitWindow/Material = "Kapton"
+d:Ge/IC1/ExitWindow/HLX      = Ge/IC1/HLX cm
+d:Ge/IC1/ExitWindow/HLY      = Ge/IC1/HLY cm
+d:Ge/IC1/ExitWindow/HLZ      = 0.0125 mm # 25 um
+d:Ge/IC1/ExitWindow/TransZ   = 13.0435 mm
+
+### Second group : the wires !!
+s:Ge/IC1/IC11/Parent     = "IC1"
+s:Ge/IC1/IC11/Type       = "TsMultiWireChamber"
+s:Ge/IC1/IC11/Material   = "Air"
+d:Ge/IC1/IC11/HLX        = 20 cm	# 50cm
+d:Ge/IC1/IC11/HLY        = 20 cm	# 50cm
+d:Ge/IC1/IC11/HLZ        = 1 cm	# 6cm
+d:Ge/IC1/IC11/TransX     = 0 m
+d:Ge/IC1/IC11/TransY     = 0 m
+#d:Ge/IC1/IC11/TransZ     = -286.3 cm
+d:Ge/IC1/IC11/RotX       = 0 deg
+d:Ge/IC1/IC11/RotY       = 0 deg
+d:Ge/IC1/IC11/RotZ       = 0 deg
+i:Ge/IC1/IC11/NbOfLayers = 2
+b:Ge/IC1/IC11/PrintInformation = "True"
+
+### Neeful to create Tungsten material
+sv:Ma/Tungsten/Components = 1 "Tungsten"
+uv:Ma/Tungsten/Fractions = 1 1
+d:Ma/Tungsten/Density = 19.3 g/cm3
+i:Ma/Tungsten/AtomicNumber = 74
+d:Ma/Tungsten/AtomicMass = 183.84 g/mole
+d:Ma/Tungsten/MeanExcitationEnergy = 727 eV
+
+### X wires
+s:Ge/IC1/IC11/Layer1/Material 	 = "Tungsten"
+d:Ge/IC1/IC11/Layer1/RMin 	 = 0 mm
+d:Ge/IC1/IC11/Layer1/RMax  	 = 0.0125 mm # 25 um
+d:Ge/IC1/IC11/Layer1/HL 		 = 20 cm
+d:Ge/IC1/IC11/Layer1/PosZ 	 = -4.0185 mm
+s:Ge/IC1/IC11/Layer1/Align 	 = "X"
+dv:Ge/IC1/IC11/Layer1/Displacement = 12 -19.25 -15.75 -12.25 -8.75 -5.25 -1.75 1.75 5.25 8.75 12.25 15.75 19.25 mm
+s:Ge/IC1/IC11/Layer1/Color 	 = "red" 
+
+
+### Y wires
+s:Ge/IC1/IC11/Layer2/Material 	 = "Tungsten"
+d:Ge/IC1/IC11/Layer2/RMin 	 = 0 mm
+d:Ge/IC1/IC11/Layer2/RMax 	 = 0.0125 mm # 25 um
+d:Ge/IC1/IC11/Layer2/HL 		 = 20 cm
+d:Ge/IC1/IC11/Layer2/PosZ 	 = 4.0185 mm
+s:Ge/IC1/IC11/Layer2/Align 	 = "Y"
+dv:Ge/IC1/IC11/Layer2/Displacement = 12 -19.25 -15.75 -12.25 -8.75 -5.25 -1.75 1.75 5.25 8.75 12.25 15.75 19.25 mm
+s:Ge/IC1/IC11/Layer2/Color 	 = "green"
+
+############ Constructing Iba's IC2
+# XY sensitive area
+d:Ge/IC2/XY = 100 mm
+
+s:Ge/IC2/Message  = "Constructing Real IBAs IC23 : non-wires elements"
+s:Ge/IC2/Parent   = "World"
+s:Ge/IC2/Type     = "TsBox"
+s:Ge/IC2/Material = "Air"
+d:Ge/IC2/HLX      = Ge/IC2/XY mm
+d:Ge/IC2/HLY      = Ge/IC2/XY mm
+d:Ge/IC2/HLZ      = 5 cm
+
+# Entrance Window
+s:Ge/IC2/EntranceWindow/Parent   = "IC2"
+s:Ge/IC2/EntranceWindow/Type     = "TsBox"
+s:Ge/IC2/EntranceWindow/Material = "Mylar"
+d:Ge/IC2/EntranceWindow/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/EntranceWindow/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/EntranceWindow/HLZ 	 = 9.5 um
+d:Ge/IC2/EntranceWindow/TransZ 	 = -38.1255 mm
+
+# GROUND22
+s:Ge/IC2/GROUND22/Parent   = "IC2"
+s:Ge/IC2/GROUND22/Type     = "TsBox"
+s:Ge/IC2/GROUND22/Material = "Air"
+d:Ge/IC2/GROUND22/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/HLZ 	   = 6.05 um
+d:Ge/IC2/GROUND22/TransZ   = -29.6 mm
+
+s:Ge/IC2/GROUND22/Mylar/Parent   = "IC2/GROUND22"
+s:Ge/IC2/GROUND22/Mylar/Type     = "TsBox"
+s:Ge/IC2/GROUND22/Mylar/Material = "Mylar"
+d:Ge/IC2/GROUND22/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/GROUND22/AluFoilGROUND22A/Parent   = "IC2/GROUND22"
+s:Ge/IC2/GROUND22/AluFoilGROUND22A/Type     = "TsBox"
+s:Ge/IC2/GROUND22/AluFoilGROUND22A/Material = "Aluminum"
+d:Ge/IC2/GROUND22/AluFoilGROUND22A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/AluFoilGROUND22A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/AluFoilGROUND22A/HLZ 	  = 0.025 um
+d:Ge/IC2/GROUND22/AluFoilGROUND22A/TransZ   = 6.025 um
+s:Ge/IC2/GROUND22/AluFoilGROUND22B/Parent   = "IC2/GROUND22"
+s:Ge/IC2/GROUND22/AluFoilGROUND22B/Type     = "TsBox"
+s:Ge/IC2/GROUND22/AluFoilGROUND22B/Material = "Aluminum"
+d:Ge/IC2/GROUND22/AluFoilGROUND22B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/AluFoilGROUND22B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/GROUND22/AluFoilGROUND22B/HLZ 	  = 0.025 um
+d:Ge/IC2/GROUND22/AluFoilGROUND22B/TransZ   = -6.025 um
+
+# HV21
+s:Ge/IC2/HV21/Parent   = "IC2"
+s:Ge/IC2/HV21/Type     = "TsBox"
+s:Ge/IC2/HV21/Material = "Air"
+d:Ge/IC2/HV21/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV21/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV21/HLZ 	   = 6.05 um
+d:Ge/IC2/HV21/TransZ   = -25.9 mm
+
+s:Ge/IC2/HV21/Mylar/Parent   = "IC2/HV21"
+s:Ge/IC2/HV21/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV21/Mylar/Material = "Mylar"
+d:Ge/IC2/HV21/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV21/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV21/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV21/AluFoilHV21A/Parent   = "IC2/HV21"
+s:Ge/IC2/HV21/AluFoilHV21A/Type     = "TsBox"
+s:Ge/IC2/HV21/AluFoilHV21A/Material = "Aluminum"
+d:Ge/IC2/HV21/AluFoilHV21A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV21/AluFoilHV21A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV21/AluFoilHV21A/HLZ 	  = 0.025 um
+d:Ge/IC2/HV21/AluFoilHV21A/TransZ   = 6.025 um
+s:Ge/IC2/HV21/AluFoilHV21B/Parent   = "IC2/HV21"
+s:Ge/IC2/HV21/AluFoilHV21B/Type     = "TsBox"
+s:Ge/IC2/HV21/AluFoilHV21B/Material = "Aluminum"
+d:Ge/IC2/HV21/AluFoilHV21B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV21/AluFoilHV21B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV21/AluFoilHV21B/HLZ 	  = 0.025 um
+d:Ge/IC2/HV21/AluFoilHV21B/TransZ   = -6.025 um
+
+# STRIPS_Y
+s:Ge/IC2/STRIPS_Y/Parent   = "IC2"
+s:Ge/IC2/STRIPS_Y/Type     = "TsBox"
+s:Ge/IC2/STRIPS_Y/Material = "Air"
+d:Ge/IC2/STRIPS_Y/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/HLZ 	   = 3.1 um
+d:Ge/IC2/STRIPS_Y/TransZ   = -22.2 mm
+
+s:Ge/IC2/STRIPS_Y/Mylar/Parent   = "IC2/STRIPS_Y"
+s:Ge/IC2/STRIPS_Y/Mylar/Type     = "TsBox"
+s:Ge/IC2/STRIPS_Y/Mylar/Material = "Mylar"
+d:Ge/IC2/STRIPS_Y/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/Mylar/HLZ 	 = 3 um
+
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/Parent   = "IC2/STRIPS_Y"
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/Type     = "TsBox"
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/Material = "Aluminum"
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/HLZ 	  = 0.05 um
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YA/TransZ   = 3.05 um
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/Parent   = "IC2/STRIPS_Y"
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/Type     = "TsBox"
+s:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/Material = "Aluminum"
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/HLZ 	  = 0.05 um
+d:Ge/IC2/STRIPS_Y/AluFoilSTRIPS_YB/TransZ   = -3.05 um
+
+# HV22
+s:Ge/IC2/HV22/Parent   = "IC2"
+s:Ge/IC2/HV22/Type     = "TsBox"
+s:Ge/IC2/HV22/Material = "Air"
+d:Ge/IC2/HV22/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV22/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV22/HLZ 	   = 6.05 um
+d:Ge/IC2/HV22/TransZ   = -18.5 mm
+
+s:Ge/IC2/HV22/Mylar/Parent   = "IC2/HV22"
+s:Ge/IC2/HV22/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV22/Mylar/Material = "Mylar"
+d:Ge/IC2/HV22/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV22/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV22/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV22/AluFoilHV22A/Parent   = "IC2/HV22"
+s:Ge/IC2/HV22/AluFoilHV22A/Type     = "TsBox"
+s:Ge/IC2/HV22/AluFoilHV22A/Material = "Aluminum"
+d:Ge/IC2/HV22/AluFoilHV22A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV22/AluFoilHV22A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV22/AluFoilHV22A/HLZ 	  = 0.025 um
+d:Ge/IC2/HV22/AluFoilHV22A/TransZ   = 6.025 um
+s:Ge/IC2/HV22/AluFoilHV22B/Parent   = "IC2/HV22"
+s:Ge/IC2/HV22/AluFoilHV22B/Type     = "TsBox"
+s:Ge/IC2/HV22/AluFoilHV22B/Material = "Aluminum"
+d:Ge/IC2/HV22/AluFoilHV22B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV22/AluFoilHV22B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV22/AluFoilHV22B/HLZ 	  = 0.025 um
+d:Ge/IC2/HV22/AluFoilHV22B/TransZ   = -6.025 um
+
+# PAD2
+s:Ge/IC2/PAD2/Parent   = "IC2"
+s:Ge/IC2/PAD2/Type     = "TsBox"
+s:Ge/IC2/PAD2/Material = "Air"
+d:Ge/IC2/PAD2/HLX	   = Ge/IC2/XY mm
+d:Ge/IC2/PAD2/HLY	   = Ge/IC2/XY mm
+d:Ge/IC2/PAD2/HLZ 	   = 3.1 um
+d:Ge/IC2/PAD2/TransZ   = -14.8 mm
+
+s:Ge/IC2/PAD2/Mylar/Parent   = "IC2/PAD2"
+s:Ge/IC2/PAD2/Mylar/Type     = "TsBox"
+s:Ge/IC2/PAD2/Mylar/Material = "Mylar"
+d:Ge/IC2/PAD2/Mylar/HLX	   	 = Ge/IC2/XY mm
+d:Ge/IC2/PAD2/Mylar/HLY	   	 = Ge/IC2/XY mm
+d:Ge/IC2/PAD2/Mylar/HLZ 	 = 3 um
+
+s:Ge/IC2/PAD2/AluFoilPAD2A/Parent   = "IC2/PAD2"
+s:Ge/IC2/PAD2/AluFoilPAD2A/Type     = "TsCylinder"
+s:Ge/IC2/PAD2/AluFoilPAD2A/Material = "Aluminum"
+d:Ge/IC2/PAD2/AluFoilPAD2A/RMax 	  = 11.625 mm
+d:Ge/IC2/PAD2/AluFoilPAD2A/HL 	  = 0.05 um
+d:Ge/IC2/PAD2/AluFoilPAD2A/TransZ   = 3.05 um
+s:Ge/IC2/PAD2/AluFoilPAD2B/Parent   = "IC2/PAD2"
+s:Ge/IC2/PAD2/AluFoilPAD2B/Type     = "TsCylinder"
+s:Ge/IC2/PAD2/AluFoilPAD2B/Material = "Aluminum"
+d:Ge/IC2/PAD2/AluFoilPAD2B/RMax 	  = 11.625 mm
+d:Ge/IC2/PAD2/AluFoilPAD2B/HL 	  = 0.05 um
+d:Ge/IC2/PAD2/AluFoilPAD2B/TransZ   = -3.05 um 
+
+# HV23
+s:Ge/IC2/HV23/Parent   = "IC2"
+s:Ge/IC2/HV23/Type     = "TsBox"
+s:Ge/IC2/HV23/Material = "Air"
+d:Ge/IC2/HV23/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV23/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV23/HLZ 	   = 6.05 um
+d:Ge/IC2/HV23/TransZ   = -11.1 mm
+
+s:Ge/IC2/HV23/Mylar/Parent   = "IC2/HV23"
+s:Ge/IC2/HV23/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV23/Mylar/Material = "Mylar"
+d:Ge/IC2/HV23/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV23/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV23/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV23/AluFoilHV23A/Parent   = "IC2/HV23"
+s:Ge/IC2/HV23/AluFoilHV23A/Type     = "TsBox"
+s:Ge/IC2/HV23/AluFoilHV23A/Material = "Aluminum"
+d:Ge/IC2/HV23/AluFoilHV23A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV23/AluFoilHV23A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV23/AluFoilHV23A/HLZ 	  = 0.025 um
+d:Ge/IC2/HV23/AluFoilHV23A/TransZ   = 6.025 um
+s:Ge/IC2/HV23/AluFoilHV23B/Parent   = "IC2/HV23"
+s:Ge/IC2/HV23/AluFoilHV23B/Type     = "TsBox"
+s:Ge/IC2/HV23/AluFoilHV23B/Material = "Aluminum"
+d:Ge/IC2/HV23/AluFoilHV23B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV23/AluFoilHV23B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV23/AluFoilHV23B/HLZ 	  = 0.025 um
+d:Ge/IC2/HV23/AluFoilHV23B/TransZ   = -6.025 um
+
+# INTEGRAL2
+s:Ge/IC2/INTEGRAL2/Parent   = "IC2"
+s:Ge/IC2/INTEGRAL2/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL2/Material = "Air"
+d:Ge/IC2/INTEGRAL2/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/HLZ 	  	= 6.05 um
+d:Ge/IC2/INTEGRAL2/TransZ 	= -7.4 mm
+
+s:Ge/IC2/INTEGRAL2/Mylar/Parent   = "IC2/INTEGRAL2"
+s:Ge/IC2/INTEGRAL2/Mylar/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL2/Mylar/Material = "Mylar"
+d:Ge/IC2/INTEGRAL2/Mylar/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/Mylar/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/Mylar/HLZ 	  = 6 um
+
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/Parent   = "IC2/INTEGRAL2"
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/Material = "Aluminum"
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/HLZ 	  	= 0.025 um
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2A/TransZ   = 6.025 um
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/Parent   = "IC2/INTEGRAL2"
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/Material = "Aluminum"
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/HLZ 	  	= 0.025 um
+d:Ge/IC2/INTEGRAL2/AluFoilINTEGRAL2B/TransZ   = -6.025 um
+
+# HV24
+s:Ge/IC2/HV24/Parent   = "IC2"
+s:Ge/IC2/HV24/Type     = "TsBox"
+s:Ge/IC2/HV24/Material = "Air"
+d:Ge/IC2/HV24/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV24/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV24/HLZ 	   = 6.05 um
+d:Ge/IC2/HV24/TransZ   = -3.7 mm
+
+s:Ge/IC2/HV24/Mylar/Parent   = "IC2/HV24"
+s:Ge/IC2/HV24/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV24/Mylar/Material = "Mylar"
+d:Ge/IC2/HV24/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV24/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV24/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV24/AluFoilHV24A/Parent   = "IC2/HV24"
+s:Ge/IC2/HV24/AluFoilHV24A/Type     = "TsBox"
+s:Ge/IC2/HV24/AluFoilHV24A/Material = "Aluminum"
+d:Ge/IC2/HV24/AluFoilHV24A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV24/AluFoilHV24A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV24/AluFoilHV24A/HLZ 	  = 0.025 um
+d:Ge/IC2/HV24/AluFoilHV24A/TransZ   = 6.025 um
+s:Ge/IC2/HV24/AluFoilHV24B/Parent   = "IC2/HV24"
+s:Ge/IC2/HV24/AluFoilHV24B/Type     = "TsBox"
+s:Ge/IC2/HV24/AluFoilHV24B/Material = "Aluminum"
+d:Ge/IC2/HV24/AluFoilHV24B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV24/AluFoilHV24B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/HV24/AluFoilHV24B/HLZ 	  = 0.025 um
+d:Ge/IC2/HV24/AluFoilHV24B/TransZ   = -6.025 um
+
+# GROUND SYMETRY
+s:Ge/IC2/GroundSymetry/Parent   = "IC2"
+s:Ge/IC2/GroundSymetry/Type     = "TsBox"
+s:Ge/IC2/GroundSymetry/Material = "Air"
+d:Ge/IC2/GroundSymetry/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/HLZ 	  	= 6.05 um
+
+s:Ge/IC2/GroundSymetry/MylarFoil/Parent   = "IC2/GroundSymetry"
+s:Ge/IC2/GroundSymetry/MylarFoil/Type     = "TsBox"
+s:Ge/IC2/GroundSymetry/MylarFoil/Material = "Mylar"
+d:Ge/IC2/GroundSymetry/MylarFoil/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/HLZ 	  = 6 um
+
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/Parent   = "IC2/GroundSymetry"
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/Type     = "TsBox"
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/Material = "Aluminum"
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/HLZ 	   = 0.025 um
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilA/TransZ   = 6.025 um
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/Parent   = "IC2/GroundSymetry"
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/Type     = "TsBox"
+s:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/Material = "Aluminum"
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/HLZ 	   = 0.025 um
+d:Ge/IC2/GroundSymetry/MylarFoil/AluFoilB/TransZ   = -6.025 um
+
+# HV34 
+s:Ge/IC2/HV34/Parent   = "IC2"
+s:Ge/IC2/HV34/Type     = "TsBox"
+s:Ge/IC2/HV34/Material = "Air"
+d:Ge/IC2/HV34/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV34/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV34/HLZ 	   = 6.05 um
+d:Ge/IC2/HV34/TransZ   = 3.7 mm
+
+s:Ge/IC2/HV34/Mylar/Parent   = "IC2/HV34"
+s:Ge/IC2/HV34/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV34/Mylar/Material = "Mylar"
+d:Ge/IC2/HV34/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV34/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV34/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV34/AluFoilHV34A/Parent   = "IC2/HV34"
+s:Ge/IC2/HV34/AluFoilHV34A/Type     = "TsBox"
+s:Ge/IC2/HV34/AluFoilHV34A/Material = "Aluminum"
+d:Ge/IC2/HV34/AluFoilHV34A/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV34/AluFoilHV34A/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV34/AluFoilHV34A/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV34/AluFoilHV34A/TransZ   = 6.025 um
+s:Ge/IC2/HV34/AluFoilHV34B/Parent   = "IC2/HV34"
+s:Ge/IC2/HV34/AluFoilHV34B/Type     = "TsBox"
+s:Ge/IC2/HV34/AluFoilHV34B/Material = "Aluminum"
+d:Ge/IC2/HV34/AluFoilHV34B/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV34/AluFoilHV34B/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV34/AluFoilHV34B/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV34/AluFoilHV34B/TransZ   = -6.025 um
+
+# INTEGRAL3
+s:Ge/IC2/INTEGRAL3/Parent   = "IC2"
+s:Ge/IC2/INTEGRAL3/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL3/Material = "Air"
+d:Ge/IC2/INTEGRAL3/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/HLZ 	  	= 6.05 um
+d:Ge/IC2/INTEGRAL3/TransZ  	= 7.4 mm
+
+s:Ge/IC2/INTEGRAL3/Mylar/Parent   = "IC2/INTEGRAL3"
+s:Ge/IC2/INTEGRAL3/Mylar/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL3/Mylar/Material = "Mylar"
+d:Ge/IC2/INTEGRAL3/Mylar/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/Mylar/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/Mylar/HLZ 	  = 6 um
+
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/Parent   = "IC2/INTEGRAL3"
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/Material = "Aluminum"
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/HLZ 	  = 0.025 um
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3A/TransZ   = 6.025 um
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/Parent   = "IC2/INTEGRAL3"
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/Type     = "TsBox"
+s:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/Material = "Aluminum"
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/HLX 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/HLY 	  = Ge/IC2/XY mm
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/HLZ 	  = 0.025 um
+d:Ge/IC2/INTEGRAL3/AluFoilINTEGRAL3B/TransZ   = -6.025 um
+
+# HV33
+s:Ge/IC2/HV33/Parent   = "IC2"
+s:Ge/IC2/HV33/Type     = "TsBox"
+s:Ge/IC2/HV33/Material = "Air"
+d:Ge/IC2/HV33/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV33/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV33/HLZ 	   = 6.05 um
+d:Ge/IC2/HV33/TransZ   = 11.1 mm
+
+s:Ge/IC2/HV33/Mylar/Parent   = "IC2/HV33"
+s:Ge/IC2/HV33/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV33/Mylar/Material = "Mylar"
+d:Ge/IC2/HV33/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV33/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV33/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV33/AluFoilHV33A/Parent   = "IC2/HV33"
+s:Ge/IC2/HV33/AluFoilHV33A/Type     = "TsBox"
+s:Ge/IC2/HV33/AluFoilHV33A/Material = "Aluminum"
+d:Ge/IC2/HV33/AluFoilHV33A/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV33/AluFoilHV33A/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV33/AluFoilHV33A/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV33/AluFoilHV33A/TransZ   = 6.025 um
+s:Ge/IC2/HV33/AluFoilHV33B/Parent   = "IC2/HV33"
+s:Ge/IC2/HV33/AluFoilHV33B/Type     = "TsBox"
+s:Ge/IC2/HV33/AluFoilHV33B/Material = "Aluminum"
+d:Ge/IC2/HV33/AluFoilHV33B/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV33/AluFoilHV33B/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV33/AluFoilHV33B/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV33/AluFoilHV33B/TransZ   = -6.025 um
+
+# PAD3
+s:Ge/IC2/PAD3/Parent   = "IC2"
+s:Ge/IC2/PAD3/Type     = "TsBox"
+s:Ge/IC2/PAD3/Material = "Air"
+d:Ge/IC2/PAD3/HLX	   = Ge/IC2/XY mm
+d:Ge/IC2/PAD3/HLY	   = Ge/IC2/XY mm
+d:Ge/IC2/PAD3/HLZ 	   = 3.1 um
+d:Ge/IC2/PAD3/TransZ   = 14.8 mm
+
+s:Ge/IC2/PAD3/Mylar/Parent   = "IC2/PAD3"
+s:Ge/IC2/PAD3/Mylar/Type     = "TsBox"
+s:Ge/IC2/PAD3/Mylar/Material = "Mylar"
+d:Ge/IC2/PAD3/Mylar/HLX	   	 = Ge/IC2/XY mm
+d:Ge/IC2/PAD3/Mylar/HLY	   	 = Ge/IC2/XY mm
+d:Ge/IC2/PAD3/Mylar/HLZ 	 = 3 um
+
+s:Ge/IC2/PAD3/AluFoilPAD3A/Parent   = "IC2/PAD3"
+s:Ge/IC2/PAD3/AluFoilPAD3A/Type     = "TsCylinder"
+s:Ge/IC2/PAD3/AluFoilPAD3A/Material = "Aluminum"
+d:Ge/IC2/PAD3/AluFoilPAD3A/RMax 	= 11.625 mm
+d:Ge/IC2/PAD3/AluFoilPAD3A/HL 	  	= 0.05 um
+d:Ge/IC2/PAD3/AluFoilPAD3A/TransZ   = 3.05 um
+s:Ge/IC2/PAD3/AluFoilPAD3B/Parent   = "IC2/PAD3"
+s:Ge/IC2/PAD3/AluFoilPAD3B/Type     = "TsCylinder"
+s:Ge/IC2/PAD3/AluFoilPAD3B/Material = "Aluminum"
+d:Ge/IC2/PAD3/AluFoilPAD3B/RMax 	= 11.625 mm
+d:Ge/IC2/PAD3/AluFoilPAD3B/HL 	  	= 0.05 um
+d:Ge/IC2/PAD3/AluFoilPAD3B/TransZ   = -3.05 um 
+
+# HV32
+s:Ge/IC2/HV32/Parent   = "IC2"
+s:Ge/IC2/HV32/Type     = "TsBox"
+s:Ge/IC2/HV32/Material = "Air"
+d:Ge/IC2/HV32/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV32/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/HV32/HLZ 	   = 6.05 um
+d:Ge/IC2/HV32/TransZ   = 18.5 mm
+
+s:Ge/IC2/HV32/Mylar/Parent   = "IC2/HV32"
+s:Ge/IC2/HV32/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV32/Mylar/Material = "Mylar"
+d:Ge/IC2/HV32/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV32/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV32/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV32/AluFoilHV32A/Parent   = "IC2/HV32"
+s:Ge/IC2/HV32/AluFoilHV32A/Type     = "TsBox"
+s:Ge/IC2/HV32/AluFoilHV32A/Material = "Aluminum"
+d:Ge/IC2/HV32/AluFoilHV32A/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV32/AluFoilHV32A/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV32/AluFoilHV32A/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV32/AluFoilHV32A/TransZ   = 6.025 um
+s:Ge/IC2/HV32/AluFoilHV32B/Parent   = "IC2/HV32"
+s:Ge/IC2/HV32/AluFoilHV32B/Type     = "TsBox"
+s:Ge/IC2/HV32/AluFoilHV32B/Material = "Aluminum"
+d:Ge/IC2/HV32/AluFoilHV32B/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV32/AluFoilHV32B/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV32/AluFoilHV32B/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV32/AluFoilHV32B/TransZ   = -6.025 um
+
+# STRIPS_X
+s:Ge/IC2/STRIPS_X/Parent   = "IC2"
+s:Ge/IC2/STRIPS_X/Type     = "TsBox"
+s:Ge/IC2/STRIPS_X/Material = "Air"
+d:Ge/IC2/STRIPS_X/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/HLZ 	   = 3.1 um
+d:Ge/IC2/STRIPS_X/TransZ   = 22.2 mm
+
+s:Ge/IC2/STRIPS_X/Mylar/Parent   = "IC2/STRIPS_X"
+s:Ge/IC2/STRIPS_X/Mylar/Type     = "TsBox"
+s:Ge/IC2/STRIPS_X/Mylar/Material = "Mylar"
+d:Ge/IC2/STRIPS_X/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/Mylar/HLZ 	 = 3 um
+
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/Parent   = "IC2/STRIPS_X"
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/Type     = "TsBox"
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/Material = "Aluminum"
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/HLZ 	  	= 0.05 um
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XA/TransZ   = 3.05 um
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/Parent   = "IC2/STRIPS_X"
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/Type     = "TsBox"
+s:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/Material = "Aluminum"
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/HLZ 	  	= 0.05 um
+d:Ge/IC2/STRIPS_X/AluFoilSTRIPS_XB/TransZ   = -3.05 um
+
+# HV31
+s:Ge/IC2/HV31/Parent   = "IC2"
+s:Ge/IC2/HV31/Type     = "TsBox"
+s:Ge/IC2/HV31/Material = "Air"
+d:Ge/IC2/HV31/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/HLZ 	  	= 6.05 um
+d:Ge/IC2/HV31/TransZ	= 25.9 mm
+
+s:Ge/IC2/HV31/Mylar/Parent   = "IC2/HV31"
+s:Ge/IC2/HV31/Mylar/Type     = "TsBox"
+s:Ge/IC2/HV31/Mylar/Material = "Mylar"
+d:Ge/IC2/HV31/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV31/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/HV31/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/HV31/AluFoilHV31A/Parent   = "IC2/HV31"
+s:Ge/IC2/HV31/AluFoilHV31A/Type     = "TsBox"
+s:Ge/IC2/HV31/AluFoilHV31A/Material = "Aluminum"
+d:Ge/IC2/HV31/AluFoilHV31A/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/AluFoilHV31A/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/AluFoilHV31A/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV31/AluFoilHV31A/TransZ   = 6.025 um
+s:Ge/IC2/HV31/AluFoilHV31B/Parent   = "IC2/HV31"
+s:Ge/IC2/HV31/AluFoilHV31B/Type     = "TsBox"
+s:Ge/IC2/HV31/AluFoilHV31B/Material = "Aluminum"
+d:Ge/IC2/HV31/AluFoilHV31B/HLX 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/AluFoilHV31B/HLY 	  	= Ge/IC2/XY mm
+d:Ge/IC2/HV31/AluFoilHV31B/HLZ 	  	= 0.025 um
+d:Ge/IC2/HV31/AluFoilHV31B/TransZ   = -6.025 um
+
+# GROUND11
+s:Ge/IC2/GROUND11/Parent   = "IC2"
+s:Ge/IC2/GROUND11/Type     = "TsBox"
+s:Ge/IC2/GROUND11/Material = "Air"
+d:Ge/IC2/GROUND11/HLX 	   = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/HLY 	   = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/HLZ 	   = 6.05 um
+d:Ge/IC2/GROUND11/TransZ   = 29.6 mm
+
+s:Ge/IC2/GROUND11/Mylar/Parent   = "IC2/GROUND11"
+s:Ge/IC2/GROUND11/Mylar/Type     = "TsBox"
+s:Ge/IC2/GROUND11/Mylar/Material = "Mylar"
+d:Ge/IC2/GROUND11/Mylar/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/Mylar/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/Mylar/HLZ 	 = 6 um
+
+s:Ge/IC2/GROUND11/AluFoil3A/Parent   = "IC2/GROUND11"
+s:Ge/IC2/GROUND11/AluFoil3A/Type     = "TsBox"
+s:Ge/IC2/GROUND11/AluFoil3A/Material = "Aluminum"
+d:Ge/IC2/GROUND11/AluFoil3A/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/AluFoil3A/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/AluFoil3A/HLZ 	 = 0.025 um
+d:Ge/IC2/GROUND11/AluFoil3A/TransZ   = 6.025 um
+s:Ge/IC2/GROUND11/AluFoil3B/Parent   = "IC2/GROUND11"
+s:Ge/IC2/GROUND11/AluFoil3B/Type     = "TsBox"
+s:Ge/IC2/GROUND11/AluFoil3B/Material = "Aluminum"
+d:Ge/IC2/GROUND11/AluFoil3B/HLX  	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/AluFoil3B/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/GROUND11/AluFoil3B/HLZ 	 = 0.025 um
+d:Ge/IC2/GROUND11/AluFoil3B/TransZ   = -6.025 um
+
+# Exit Window
+s:Ge/IC2/ExitWindow/Parent   = "IC2"
+s:Ge/IC2/ExitWindow/Type     = "TsBox"
+s:Ge/IC2/ExitWindow/Material = "Mylar"
+d:Ge/IC2/ExitWindow/HLX 	 = Ge/IC2/XY mm
+d:Ge/IC2/ExitWindow/HLY 	 = Ge/IC2/XY mm
+d:Ge/IC2/ExitWindow/HLZ 	 = 9.5 um
+d:Ge/IC2/ExitWindow/TransZ	 = 38.1255 mm
+
