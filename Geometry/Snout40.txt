@@ -66,7 +66,6 @@ d:Ge/Snout/SquarePart3/HLY 		= 20 cm #simplified
 d:Ge/Snout/SquarePart3/HLZ   		= 3.25 cm 
 d:Ge/Snout/SquarePart3/TransZ		= -3.25 cm 
 s:Ge/Snout/SquarePart3/DrawingStyle 	= "FullWireFrame"
-
 s:Ge/Snout/SquarePart3/Hole/Parent   	= "Snout/SquarePart3"
 s:Ge/Snout/SquarePart3/Hole/Type     	= "TsBox"
 b:Ge/Snout/SquarePart3/Hole/IsParallel 	= "True"
@@ -75,10 +74,13 @@ d:Ge/Snout/SquarePart3/Hole/HLX 	= 19 cm  #simplified
 d:Ge/Snout/SquarePart3/Hole/HLY 	= 14.25 cm  #simplified
 d:Ge/Snout/SquarePart3/Hole/HLZ      	= 3.25 cm 
 
+d:Ge/Snout/TransIso = Ge/Snout/SquarePart3/TransZ + Ge/Snout/SquarePart3/HLZ cm
+d:Ge/Snout/AntiTransIso = -1. * Ge/Snout/TransIso cm
+
 ##### Range Shifter (RS) 
 s:Ge/RS/Parent 				= "Snout"
 b:Ge/RS/IsParallel 			= "True"
 s:Ge/RS/Type 				= "TsCylinder"
-s:Ge/RS/Material 			= "Lexan"
+s:Ge/RS/Material 			= "G4_PLEXIGLASS"
 d:Ge/RS/RMax     			= Ge/Snout/SquarePart3/Hole/HLY cm
 d:Ge/RS/TransZ 				= Ge/Snout/SquarePart3/TransZ cm

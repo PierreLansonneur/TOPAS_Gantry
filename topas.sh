@@ -12,4 +12,4 @@ export G4TENDLDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data
 export LD_LIBRARY_PATH=~/topas/libexternal/:$LD_LIBRARY_PATH
 export G4VRMLFILE_VIEWER=view3dscene
 
-../topas_3_1_p3_rhel6/topas/topas Main.txt
+../topas_3_1_p3_rhel6/topas/topas Main_12420_Field_1.txt

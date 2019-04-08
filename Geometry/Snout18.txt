@@ -82,10 +82,14 @@ d:Ge/Snout/BrassCone3/RotZ 	= 0 deg
 d:Ge/Snout/BrassCone3/SPhi 	= 0 deg
 d:Ge/Snout/BrassCone3/DPhi 	= 360 deg
 
+d:Ge/Snout/TransIso = Ge/Snout/BrassCone3/TransZ + Ge/Snout/BrassCone3/HL cm # 15.85 cm
+d:Ge/Snout/AntiTransIso = -1. * Ge/Snout/TransIso cm
+
 ### Range Shifter
 s:Ge/RS/Parent   		= "Snout"
 b:Ge/RS/IsParallel 		= "True"
 s:Ge/RS/Type     		= "TsCylinder"
-s:Ge/RS/Material 		= "Lexan"
+s:Ge/RS/Material 		= "G4_PLEXIGLASS"
+#s:Ge/RS/Material 		= "Lexan"
 d:Ge/RS/RMax     		= Ge/Snout/BrassCone3/RMin1 cm
-d:Ge/RS/TransZ 			= Ge/Snout/BrassCone3/TransZ cm # 12.6 cm
+#d:Ge/RS/TransZ 			= 19.1 cm # Ge/Snout/BrassCone3/TransZ + Ge/Snout/BrassCone3/HL + Ge/RS/HL cm
