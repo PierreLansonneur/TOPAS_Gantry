@@ -99,7 +99,7 @@ d:Ph/Default/CutForAllParticles = 0.05 mm
 d:Ge/SM1/Dipole/MaxStepSize 	= 1 mm
 d:Ge/SM2/Dipole/MaxStepSize 	= 1 mm
 
-sv:Ph/Default/LayeredMassGeometryWorlds = 6 "Patient/CT" "Snout/BrassCone2" "Snout/BrassTube2" "Snout/BrassCone3" "RS"
+sv:Ph/Default/LayeredMassGeometryWorlds = 5 "Patient/CT" "Snout/BrassCone2" "Snout/BrassTube2" "Snout/BrassCone3" "RS"
 
 ### Time Features Parameters
 i:Tf/NumberOfSequentialTimes 	= 888
