@@ -37,7 +37,7 @@ d:Ge/SuperGroup/RotZ 		= 0 deg
 
 ### PATIENT
 s:Ge/Patient/ImagingToMaterialConverter 	= "Schneider"
-includeFile 					= HUtoMAT.txt
+includeFile 					= HUtoMAT_Toshiba120kV.txt
 
 ### Patient group
 s:Ge/Patient/Message 				= "Constructing Patient"
@@ -100,7 +100,6 @@ d:Ge/SM1/Dipole/MaxStepSize 	= 1 mm
 d:Ge/SM2/Dipole/MaxStepSize 	= 1 mm
 
 sv:Ph/Default/LayeredMassGeometryWorlds = 5 "Patient/CT" "Snout/BrassCone2" "Snout/BrassTube2" "Snout/BrassCone3" "RS"
-
 
 ### Time Features Parameters
 i:Tf/NumberOfSequentialTimes 	= 1368
