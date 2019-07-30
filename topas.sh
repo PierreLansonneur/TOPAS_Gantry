@@ -1,15 +1,15 @@
-export G4LEDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4EMLOW7.3
-export G4NEUTRONHPDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4NDL4.5
-export G4LEVELGAMMADATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/PhotonEvaporation5.2
-export G4RADIOACTIVEDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/RadioactiveDecay5.2
-export G4SAIDXSDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4SAIDDATA1.1
-export G4NEUTRONXSDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4NEUTRONXS1.4
-export G4PIIDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4PII1.3
-export G4REALSURFACEDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/RealSurface2.1.1
-export G4ABLADATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4ABLA3.1
-export G4ENSDFSTATEDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4ENSDFSTATE2.2
-export G4TENDLDATA=~/Downloads/geant4.10.04.p02-install/share/Geant4-10.4.2/data/G4TENDL1.3
+### TOPAS v3.2
+export G4LEDATA=~/G4Data/G4EMLOW6.50
+export G4NEUTRONHPDATA=~/G4Data/G4NDL4.5
+export G4LEVELGAMMADATA=~/G4Data/PhotonEvaporation4.3.2
+export G4RADIOACTIVEDATA=~/G4Data/RadioactiveDecay5.1.1
+export G4SAIDXSDATA=~/G4Data/G4SAIDDATA1.1
+export G4NEUTRONXSDATA=~/G4Data/G4NEUTRONXS1.4
+export G4PIIDATA=~/G4Data/G4PII1.3
+export G4REALSURFACEDATA=~/G4Data/RealSurface1.0
+export G4ABLADATA=~/G4Data/G4ABLA3.0
+export G4ENSDFSTATEDATA=~/G4Data/G4ENSDFSTATE2.1
+export G4TENDLDATA=~/G4Data/G4TENDL1.3
+#export G4VRMLFILE_VIEWER=view3dscene
 export LD_LIBRARY_PATH=~/topas/libexternal/:$LD_LIBRARY_PATH
-export G4VRMLFILE_VIEWER=view3dscene
-
-../topas_3_1_p3_rhel6/topas/topas Main_12420_Field_1.txt
+export PATH=~/topas:$PATH
