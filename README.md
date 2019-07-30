@@ -3,6 +3,6 @@ Compute the dose in human phantom using the CPO universal nozzle geometry. The m
 
 <img src="https://github.com/PierreLansonneur/TOPAS_Gantry/blob/master/output/Picture1.png" width="400" />
 
-#### launch the codes 
+#### launch the simulation 
 - For SLURM clusters:     `sbatch cluster.job`
 - For PBS clusters:        `qsub cluster.pbs`
