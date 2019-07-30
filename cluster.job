@@ -4,5 +4,5 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks=1
 
-source ../../topas.sh
+source topas.sh
 ../../topas/topas Main_12420_Field_1.txt
