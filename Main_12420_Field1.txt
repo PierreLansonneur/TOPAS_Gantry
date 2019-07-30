@@ -52,7 +52,7 @@ s:Ge/Patient/CT/Parent 	          = "Patient"
 s:Ge/Patient/CT/Type 				      = "TsDicomPatient"
 b:Ge/Patient/CT/IsParallel 			  = "False"
 s:Ge/Patient/CT/Material 			    = "G4_WATER"
-s:Ge/Patient/CT/DicomDirectory 	  = "CT_12420"
+s:Ge/Patient/CT/DicomDirectory 	  = "CT"
 sv:Ge/Patient/CT/DicomModalityTags= 1 "CT"
 d:Ge/Patient/CT/TransX 				    = 0 mm
 d:Ge/Patient/CT/TransY 				    = 0 mm
@@ -93,7 +93,7 @@ d:Ph/Default/CutForAllParticles = 0.05 mm
 d:Ge/SM1/Dipole/MaxStepSize 	  = 1 mm
 d:Ge/SM2/Dipole/MaxStepSize 	  = 1 mm
 
-### SPEED-UP the simulation
+### Crop limits
 # select the limits of the CT loaded (with TOPAS v3.2)
 i:Ge/Patient/CT/RestrictVoxelsXMin = 115
 i:Ge/Patient/CT/RestrictVoxelsXMax = 400
@@ -171,11 +171,9 @@ u:So/Default/CorrelationX 	  = -0.882
 d:So/Default/SigmaY 		      = Tf/SpotSize/Value mm
 u:So/Default/SigmaYprime 	    = Tf/BeamDivergence/Value
 u:So/Default/CorrelationY 	  = -0.882
-i:So/Default/NumberOfHistoriesInRun = 1000 * Tf/Particles/Value #30 h
+i:So/Default/NumberOfHistoriesInRun = 1 * Tf/Particles/Value
 
 ### GRAPHICS
 b:Gr/Enable 			          = "0"
 s:Gr/ViewA/Type 		        = "VRML"
 b:Ge/World/Invisible 		    = "1"
-#b:Ge/Patient/CT/Invisible  = "1"
-#b:Gr/ViewA/IncludeAxes 	  = "1"
