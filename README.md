@@ -1,11 +1,9 @@
-# TOPAS_Gantry
-TOPAS MC codes for dose calculation in human phantom
-using the CPO universal nozzle geometry.
+# TOPAS Gantry
+Compute the dose in human phantom using the CPO universal nozzle geometry.
+The code is developed for protontherapy (pencil beam scanning) and is based on TOPAS 3.2 (http://www.topasmc.org/).
 
-(http://www.topasmc.org/)
-
-<img src="https://github.com/PierreLansonneur/OPAS_Gantry/blob/master/output/scrrenshot.png" width="400" />
+<img src="https://github.com/PierreLansonneur/TOPAS_Gantry/blob/master/output/Picture1.png" width="400" />
 
 #### launch the codes 
-- For SLURM cluster:     `sbatch cluster.job`
-- For PBS cluster:        `qsub cluster.pbs`
+- For SLURM clusters:     `sbatch cluster.job`
+- For PBS clusters:        `qsub cluster.pbs`
