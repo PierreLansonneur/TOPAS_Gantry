@@ -1,5 +1,5 @@
 ######################################################
-### TOPAS MC main file for patient ID #12420
+# TOPAS MC main file for patient ID #12420
 # Beam name: Field_1
 # Only part of the CT is loaded in this simulation
 # The components are not placed in a paralell world 
